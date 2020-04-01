@@ -26,7 +26,7 @@ import logging
 import utils
 import math
 #from tensorboardX import SummaryWriter
-from datasets import DatasetHDF5
+#from datasets import DatasetHDF5
 from profiling import benchmark
 #writer = SummaryWriter()
 
@@ -34,7 +34,7 @@ import ptb_reader
 import models.lstm as lstmpy
 from torch.autograd import Variable
 import json
-
+from lars import LARS
 
 if settings.USE_FP16:
     try:
@@ -53,7 +53,7 @@ _support_dnns = ['resnet50', 'googlenet', 'inceptionv4', 'inceptionv3', 'vgg16i'
                  'lstm', \
                  'mnistnet', 'fcn5net', 'lenet', 'lr']
 
-NUM_CPU_THREADS=2
+NUM_CPU_THREADS=0
 
 process = psutil.Process(os.getpid())
 
@@ -222,11 +222,11 @@ class DLTrainer:
                     {'params': decay, 'weight_decay': weight_decay}]
 
         self.optimizer = optim.SGD(parameters, 
-                lr=self.lr,
-                momentum=self.m, 
-                weight_decay=weight_decay,
-                nesterov=nesterov)
-
+               lr=self.lr,
+               momentum=self.m, 
+               weight_decay=weight_decay,
+               nesterov=nesterov)
+        #self.optimizer = LARS(self.net.parameters(), lr=self.lr, momentum=self.m, weight_decay=weight_decay, eeta=0.001, max_epoch=140)
         self.train_epoch = 0
 
         if self.pretrain is not None and os.path.isfile(self.pretrain):
@@ -374,7 +374,7 @@ class DLTrainer:
         self.trainloader = torch.utils.data.DataLoader(trainset, batch_size=self.batch_size,
                                                   shuffle=shuffle, num_workers=NUM_CPU_THREADS, sampler=train_sampler)
         self.testloader = torch.utils.data.DataLoader(testset, batch_size=self.batch_size,
-                                                 shuffle=False, num_workers=1)
+                                                 shuffle=False, num_workers=0)
         self.classes = ('plane', 'car', 'bird', 'cat',
                'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
@@ -410,7 +410,7 @@ class DLTrainer:
                 batch_size=self.batch_size, shuffle=shuffle, num_workers=NUM_CPU_THREADS, sampler=train_sampler)
         self.testloader = torch.utils.data.DataLoader(
                 testset,
-                batch_size=self.batch_size, shuffle=False, num_workers=1)
+                batch_size=self.batch_size, shuffle=False, num_workers=0)
     def ptb_prepare(self):
         # Data loading code
         # =====================================

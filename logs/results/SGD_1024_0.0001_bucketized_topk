@@ -1,0 +1,919 @@
+2020-03-25 14:04:13,906 [dist_trainer.py:135] INFO Configurations: Namespace(batch_size=1024, compressor='topk', data_dir='/home/sbhatt/dlcom/codebase/gtopk_sgd_modified/data', dataset='cifar10', density=0.001, dnn='resnet20', lr=0.1, max_epochs=141, nsteps_update=1, num_steps=35, nworkers=2, nwpernode=1, pretrain=None, saved_dir='./logs/iclr', threshold=524288000)
+2020-03-25 14:04:16,950 [dl_trainer.py:254] INFO num_batches_per_epoch: 25
+2020-03-25 14:04:17,185 [distributed_optimizer.py:63] INFO _dynamic_densities: [0.015625, 0.004, 0.001]
+2020-03-25 14:04:17,187 [distributed_optimizer.py:323] INFO # of parameters: 269722
+2020-03-25 14:04:17,187 [distributed_optimizer.py:324] INFO Total number of tensors: 59
+2020-03-25 14:04:17,187 [distributed_optimizer.py:325] INFO Merged Number of groups: 1
+2020-03-25 14:04:17,611 [dist_trainer.py:62] INFO max_epochs: 141
+2020-03-25 14:04:37,429 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.825709, Speed: 1240.146996 images/s
+2020-03-25 14:04:37,430 [distributed_optimizer.py:142] INFO Average number of selected gradients: 4214.000000, exact k: 1078
+2020-03-25 14:04:37,430 [distributed_optimizer.py:143] INFO The number of selected gradients: [4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214, 4214]
+2020-03-25 14:04:38,367 [dl_trainer.py:634] INFO train iter: 25, num_batches_per_epoch: 25
+2020-03-25 14:04:38,368 [dl_trainer.py:635] INFO Epoch 1, avg train acc: 11.425781, lr: 0.020640, avg loss: 3.961744
+2020-03-25 14:04:41,311 [dl_trainer.py:822] INFO Epoch 1, lr: 0.020640, val loss: 4.415705, val top-1 acc: 10.493064, top-5 acc: 50.015944
+2020-03-25 14:04:53,405 [dl_trainer.py:732] WARNING [  1][   40/   25][rank:0] loss: 7.243, average forward (0.015505) and backward (0.481403) time: 0.842191, iotime: 0.271207 
+2020-03-25 14:05:00,018 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.941146, Speed: 1088.035758 images/s
+2020-03-25 14:05:00,019 [distributed_optimizer.py:142] INFO Average number of selected gradients: 1078.000000, exact k: 269
+2020-03-25 14:05:00,019 [distributed_optimizer.py:143] INFO The number of selected gradients: [1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078, 1078]
+2020-03-25 14:05:01,788 [dl_trainer.py:634] INFO train iter: 50, num_batches_per_epoch: 25
+2020-03-25 14:05:01,789 [dl_trainer.py:635] INFO Epoch 2, avg train acc: 12.125000, lr: 0.040480, avg loss: 5.977248
+2020-03-25 14:05:04,720 [dl_trainer.py:822] INFO Epoch 2, lr: 0.040480, val loss: 5.972473, val top-1 acc: 9.901945, top-5 acc: 50.421317
+2020-03-25 14:05:22,784 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.948526, Speed: 1079.570334 images/s
+2020-03-25 14:05:22,785 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:05:22,785 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:05:25,360 [dl_trainer.py:634] INFO train iter: 75, num_batches_per_epoch: 25
+2020-03-25 14:05:25,361 [dl_trainer.py:635] INFO Epoch 3, avg train acc: 10.222656, lr: 0.060320, avg loss: 3.712898
+2020-03-25 14:05:28,288 [dl_trainer.py:822] INFO Epoch 3, lr: 0.060320, val loss: 5.864650, val top-1 acc: 10.681601, top-5 acc: 51.166893
+2020-03-25 14:05:32,246 [dl_trainer.py:732] WARNING [  3][   80/   25][rank:0] loss: 2.846, average forward (0.004183) and backward (0.496414) time: 0.915362, iotime: 0.267535 
+2020-03-25 14:05:45,307 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.938414, Speed: 1091.202646 images/s
+2020-03-25 14:05:45,308 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:05:45,308 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:05:48,684 [dl_trainer.py:634] INFO train iter: 100, num_batches_per_epoch: 25
+2020-03-25 14:05:48,684 [dl_trainer.py:635] INFO Epoch 4, avg train acc: 9.410156, lr: 0.080160, avg loss: 2.695816
+2020-03-25 14:05:51,610 [dl_trainer.py:822] INFO Epoch 4, lr: 0.080160, val loss: 5.996084, val top-1 acc: 10.980349, top-5 acc: 51.743064
+2020-03-25 14:06:07,612 [dl_trainer.py:732] WARNING [  4][  120/   25][rank:0] loss: 2.431, average forward (0.004156) and backward (0.487909) time: 0.831032, iotime: 0.265130 
+2020-03-25 14:06:07,659 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.931277, Speed: 1099.564970 images/s
+2020-03-25 14:06:07,659 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:06:07,660 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:06:11,781 [dl_trainer.py:634] INFO train iter: 125, num_batches_per_epoch: 25
+2020-03-25 14:06:11,782 [dl_trainer.py:635] INFO Epoch 5, avg train acc: 10.531250, lr: 0.100000, avg loss: 2.591606
+2020-03-25 14:06:14,707 [dl_trainer.py:822] INFO Epoch 5, lr: 0.100000, val loss: 3.011401, val top-1 acc: 10.755939, top-5 acc: 49.917490
+2020-03-25 14:06:29,855 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.924804, Speed: 1107.261383 images/s
+2020-03-25 14:06:29,856 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:06:29,856 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:06:34,777 [dl_trainer.py:634] INFO train iter: 150, num_batches_per_epoch: 25
+2020-03-25 14:06:34,778 [dl_trainer.py:635] INFO Epoch 6, avg train acc: 10.132812, lr: 0.100000, avg loss: 2.486584
+2020-03-25 14:06:37,696 [dl_trainer.py:822] INFO Epoch 6, lr: 0.100000, val loss: 2.307749, val top-1 acc: 10.030493, top-5 acc: 50.015147
+2020-03-25 14:06:45,603 [dl_trainer.py:732] WARNING [  6][  160/   25][rank:0] loss: 2.460, average forward (0.004151) and backward (0.482063) time: 0.898138, iotime: 0.265130 
+2020-03-25 14:06:52,077 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.925884, Speed: 1105.969772 images/s
+2020-03-25 14:06:52,078 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:06:52,078 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:06:57,804 [dl_trainer.py:634] INFO train iter: 175, num_batches_per_epoch: 25
+2020-03-25 14:06:57,804 [dl_trainer.py:635] INFO Epoch 7, avg train acc: 10.042969, lr: 0.100000, avg loss: 2.476226
+2020-03-25 14:07:01,028 [dl_trainer.py:822] INFO Epoch 7, lr: 0.100000, val loss: 2.503154, val top-1 acc: 9.841159, top-5 acc: 50.252511
+2020-03-25 14:07:14,556 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.936588, Speed: 1093.329679 images/s
+2020-03-25 14:07:14,557 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:07:14,557 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:07:21,031 [dl_trainer.py:732] WARNING [  7][  200/   25][rank:0] loss: 2.355, average forward (0.004704) and backward (0.478727) time: 0.849364, iotime: 0.284799 
+2020-03-25 14:07:21,054 [dl_trainer.py:634] INFO train iter: 200, num_batches_per_epoch: 25
+2020-03-25 14:07:21,054 [dl_trainer.py:635] INFO Epoch 8, avg train acc: 11.097656, lr: 0.100000, avg loss: 2.398698
+2020-03-25 14:07:24,304 [dl_trainer.py:822] INFO Epoch 8, lr: 0.100000, val loss: 2.518409, val top-1 acc: 12.031848, top-5 acc: 50.892658
+2020-03-25 14:07:37,087 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.938717, Speed: 1090.850138 images/s
+2020-03-25 14:07:37,088 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:07:37,088 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:07:44,391 [dl_trainer.py:634] INFO train iter: 225, num_batches_per_epoch: 25
+2020-03-25 14:07:44,391 [dl_trainer.py:635] INFO Epoch 9, avg train acc: 10.605469, lr: 0.100000, avg loss: 2.381006
+2020-03-25 14:07:47,679 [dl_trainer.py:822] INFO Epoch 9, lr: 0.100000, val loss: 2.524378, val top-1 acc: 10.079719, top-5 acc: 49.749681
+2020-03-25 14:07:59,553 [dl_trainer.py:732] WARNING [  9][  240/   25][rank:0] loss: 2.358, average forward (0.004982) and backward (0.476430) time: 0.938417, iotime: 0.292688 
+2020-03-25 14:07:59,570 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.936753, Speed: 1093.137198 images/s
+2020-03-25 14:07:59,571 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:07:59,571 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:08:07,647 [dl_trainer.py:634] INFO train iter: 250, num_batches_per_epoch: 25
+2020-03-25 14:08:07,648 [dl_trainer.py:635] INFO Epoch 10, avg train acc: 10.222656, lr: 0.100000, avg loss: 2.387361
+2020-03-25 14:08:10,915 [dl_trainer.py:822] INFO Epoch 10, lr: 0.100000, val loss: 2.628258, val top-1 acc: 9.979871, top-5 acc: 50.226004
+2020-03-25 14:08:22,034 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.935952, Speed: 1094.073180 images/s
+2020-03-25 14:08:22,035 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:08:22,035 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:08:30,909 [dl_trainer.py:634] INFO train iter: 275, num_batches_per_epoch: 25
+2020-03-25 14:08:30,909 [dl_trainer.py:635] INFO Epoch 11, avg train acc: 10.101562, lr: 0.100000, avg loss: 2.350123
+2020-03-25 14:08:34,100 [dl_trainer.py:822] INFO Epoch 11, lr: 0.100000, val loss: 2.529707, val top-1 acc: 10.129544, top-5 acc: 49.682916
+2020-03-25 14:08:38,024 [dl_trainer.py:732] WARNING [ 11][  280/   25][rank:0] loss: 2.346, average forward (0.004960) and backward (0.474569) time: 0.936785, iotime: 0.294961 
+2020-03-25 14:08:44,392 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.931541, Speed: 1099.253365 images/s
+2020-03-25 14:08:44,393 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:08:44,393 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:08:54,051 [dl_trainer.py:634] INFO train iter: 300, num_batches_per_epoch: 25
+2020-03-25 14:08:54,052 [dl_trainer.py:635] INFO Epoch 12, avg train acc: 10.210938, lr: 0.100000, avg loss: 2.352529
+2020-03-25 14:08:57,266 [dl_trainer.py:822] INFO Epoch 12, lr: 0.100000, val loss: 2.709063, val top-1 acc: 10.623804, top-5 acc: 51.765186
+2020-03-25 14:09:06,717 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.930136, Speed: 1100.914045 images/s
+2020-03-25 14:09:06,717 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:09:06,717 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:09:13,153 [dl_trainer.py:732] WARNING [ 12][  320/   25][rank:0] loss: 2.370, average forward (0.004955) and backward (0.473234) time: 0.854442, iotime: 0.295068 
+2020-03-25 14:09:17,147 [dl_trainer.py:634] INFO train iter: 325, num_batches_per_epoch: 25
+2020-03-25 14:09:17,147 [dl_trainer.py:635] INFO Epoch 13, avg train acc: 10.054688, lr: 0.100000, avg loss: 2.380029
+2020-03-25 14:09:20,377 [dl_trainer.py:822] INFO Epoch 13, lr: 0.100000, val loss: 3.080977, val top-1 acc: 9.934829, top-5 acc: 52.465322
+2020-03-25 14:09:29,055 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.930738, Speed: 1100.202614 images/s
+2020-03-25 14:09:29,056 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:09:29,056 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:09:40,352 [dl_trainer.py:634] INFO train iter: 350, num_batches_per_epoch: 25
+2020-03-25 14:09:40,353 [dl_trainer.py:635] INFO Epoch 14, avg train acc: 10.292969, lr: 0.100000, avg loss: 2.377923
+2020-03-25 14:09:43,587 [dl_trainer.py:822] INFO Epoch 14, lr: 0.100000, val loss: 3.587898, val top-1 acc: 10.840641, top-5 acc: 54.245456
+2020-03-25 14:09:51,445 [dl_trainer.py:732] WARNING [ 14][  360/   25][rank:0] loss: 2.343, average forward (0.004952) and backward (0.472263) time: 0.930293, iotime: 0.290624 
+2020-03-25 14:09:51,465 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.933689, Speed: 1096.724730 images/s
+2020-03-25 14:09:51,466 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:09:51,466 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:10:03,475 [dl_trainer.py:634] INFO train iter: 375, num_batches_per_epoch: 25
+2020-03-25 14:10:03,476 [dl_trainer.py:635] INFO Epoch 15, avg train acc: 10.308594, lr: 0.100000, avg loss: 2.333536
+2020-03-25 14:10:06,715 [dl_trainer.py:822] INFO Epoch 15, lr: 0.100000, val loss: 2.428918, val top-1 acc: 11.201371, top-5 acc: 52.333984
+2020-03-25 14:10:13,880 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.933918, Speed: 1096.455575 images/s
+2020-03-25 14:10:13,881 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:10:13,881 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:10:26,609 [dl_trainer.py:732] WARNING [ 15][  400/   25][rank:0] loss: 2.300, average forward (0.004959) and backward (0.471229) time: 0.853858, iotime: 0.296128 
+2020-03-25 14:10:26,636 [dl_trainer.py:634] INFO train iter: 400, num_batches_per_epoch: 25
+2020-03-25 14:10:26,636 [dl_trainer.py:635] INFO Epoch 16, avg train acc: 10.421875, lr: 0.100000, avg loss: 2.306474
+2020-03-25 14:10:29,870 [dl_trainer.py:822] INFO Epoch 16, lr: 0.100000, val loss: 2.320248, val top-1 acc: 10.787628, top-5 acc: 51.807637
+2020-03-25 14:10:36,162 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.928359, Speed: 1103.021637 images/s
+2020-03-25 14:10:36,162 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:10:36,163 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:10:49,708 [dl_trainer.py:634] INFO train iter: 425, num_batches_per_epoch: 25
+2020-03-25 14:10:49,709 [dl_trainer.py:635] INFO Epoch 17, avg train acc: 10.695312, lr: 0.100000, avg loss: 2.304961
+2020-03-25 14:10:52,937 [dl_trainer.py:822] INFO Epoch 17, lr: 0.100000, val loss: 2.314219, val top-1 acc: 11.248804, top-5 acc: 50.330437
+2020-03-25 14:10:58,520 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.931550, Speed: 1099.243049 images/s
+2020-03-25 14:10:58,521 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:10:58,521 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:11:04,953 [dl_trainer.py:732] WARNING [ 17][  440/   25][rank:0] loss: 2.304, average forward (0.004994) and backward (0.470666) time: 0.934453, iotime: 0.296393 
+2020-03-25 14:11:12,836 [dl_trainer.py:634] INFO train iter: 450, num_batches_per_epoch: 25
+2020-03-25 14:11:12,837 [dl_trainer.py:635] INFO Epoch 18, avg train acc: 10.539062, lr: 0.100000, avg loss: 2.318327
+2020-03-25 14:11:16,062 [dl_trainer.py:822] INFO Epoch 18, lr: 0.100000, val loss: 2.327337, val top-1 acc: 10.386240, top-5 acc: 50.700733
+2020-03-25 14:11:20,771 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.927047, Speed: 1104.582220 images/s
+2020-03-25 14:11:20,771 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:11:20,771 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:11:35,836 [dl_trainer.py:634] INFO train iter: 475, num_batches_per_epoch: 25
+2020-03-25 14:11:35,837 [dl_trainer.py:635] INFO Epoch 19, avg train acc: 11.062500, lr: 0.100000, avg loss: 2.323024
+2020-03-25 14:11:38,762 [dl_trainer.py:822] INFO Epoch 19, lr: 0.100000, val loss: 2.311030, val top-1 acc: 11.166893, top-5 acc: 51.853077
+2020-03-25 14:11:42,570 [dl_trainer.py:732] WARNING [ 19][  480/   25][rank:0] loss: 2.299, average forward (0.004333) and backward (0.470232) time: 0.900598, iotime: 0.271383 
+2020-03-25 14:11:42,619 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.910309, Speed: 1124.892944 images/s
+2020-03-25 14:11:42,619 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:11:42,620 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:11:58,439 [dl_trainer.py:634] INFO train iter: 500, num_batches_per_epoch: 25
+2020-03-25 14:11:58,440 [dl_trainer.py:635] INFO Epoch 20, avg train acc: 10.402344, lr: 0.100000, avg loss: 2.308988
+2020-03-25 14:12:01,358 [dl_trainer.py:822] INFO Epoch 20, lr: 0.100000, val loss: 2.331772, val top-1 acc: 10.309909, top-5 acc: 51.500119
+2020-03-25 14:12:04,432 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.908819, Speed: 1126.737056 images/s
+2020-03-25 14:12:04,432 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:12:04,432 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:12:17,065 [dl_trainer.py:732] WARNING [ 20][  520/   25][rank:0] loss: 2.301, average forward (0.004152) and backward (0.469710) time: 0.814928, iotime: 0.267419 
+2020-03-25 14:12:21,040 [dl_trainer.py:634] INFO train iter: 525, num_batches_per_epoch: 25
+2020-03-25 14:12:21,041 [dl_trainer.py:635] INFO Epoch 21, avg train acc: 10.656250, lr: 0.100000, avg loss: 2.315642
+2020-03-25 14:12:23,952 [dl_trainer.py:822] INFO Epoch 21, lr: 0.100000, val loss: 2.311776, val top-1 acc: 11.686663, top-5 acc: 51.282286
+2020-03-25 14:12:26,232 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.908317, Speed: 1127.359377 images/s
+2020-03-25 14:12:26,233 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:12:26,233 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:12:43,642 [dl_trainer.py:634] INFO train iter: 550, num_batches_per_epoch: 25
+2020-03-25 14:12:43,643 [dl_trainer.py:635] INFO Epoch 22, avg train acc: 10.878906, lr: 0.100000, avg loss: 2.307625
+2020-03-25 14:12:46,556 [dl_trainer.py:822] INFO Epoch 22, lr: 0.100000, val loss: 2.295036, val top-1 acc: 12.072704, top-5 acc: 51.696628
+2020-03-25 14:12:48,064 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.909597, Speed: 1125.773320 images/s
+2020-03-25 14:12:48,064 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:12:48,064 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:12:54,352 [dl_trainer.py:732] WARNING [ 22][  560/   25][rank:0] loss: 2.305, average forward (0.004151) and backward (0.469262) time: 0.882921, iotime: 0.263153 
+2020-03-25 14:13:06,200 [dl_trainer.py:634] INFO train iter: 575, num_batches_per_epoch: 25
+2020-03-25 14:13:06,200 [dl_trainer.py:635] INFO Epoch 23, avg train acc: 11.375000, lr: 0.100000, avg loss: 2.297668
+2020-03-25 14:13:09,098 [dl_trainer.py:822] INFO Epoch 23, lr: 0.100000, val loss: 2.290676, val top-1 acc: 11.550741, top-5 acc: 54.637476
+2020-03-25 14:13:09,807 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.905944, Speed: 1130.312579 images/s
+2020-03-25 14:13:09,808 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:13:09,808 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:13:28,665 [dl_trainer.py:732] WARNING [ 23][  600/   25][rank:0] loss: 2.306, average forward (0.004135) and backward (0.468505) time: 0.809968, iotime: 0.264449 
+2020-03-25 14:13:28,717 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.787865, Speed: 1299.714310 images/s
+2020-03-25 14:13:28,717 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:13:28,718 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:13:28,718 [dl_trainer.py:634] INFO train iter: 600, num_batches_per_epoch: 25
+2020-03-25 14:13:28,719 [dl_trainer.py:635] INFO Epoch 24, avg train acc: 11.000000, lr: 0.100000, avg loss: 2.308823
+2020-03-25 14:13:31,637 [dl_trainer.py:822] INFO Epoch 24, lr: 0.100000, val loss: 2.256598, val top-1 acc: 12.434630, top-5 acc: 57.286352
+2020-03-25 14:13:50,492 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.907251, Speed: 1128.684356 images/s
+2020-03-25 14:13:50,493 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:13:50,493 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:13:51,394 [dl_trainer.py:634] INFO train iter: 625, num_batches_per_epoch: 25
+2020-03-25 14:13:51,395 [dl_trainer.py:635] INFO Epoch 25, avg train acc: 11.488281, lr: 0.100000, avg loss: 2.295331
+2020-03-25 14:13:54,311 [dl_trainer.py:822] INFO Epoch 25, lr: 0.100000, val loss: 2.265602, val top-1 acc: 12.426260, top-5 acc: 52.805126
+2020-03-25 14:14:05,940 [dl_trainer.py:732] WARNING [ 25][  640/   25][rank:0] loss: 2.293, average forward (0.004139) and backward (0.467761) time: 0.884538, iotime: 0.266056 
+2020-03-25 14:14:12,262 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.907023, Speed: 1128.968493 images/s
+2020-03-25 14:14:12,262 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:14:12,262 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:14:13,939 [dl_trainer.py:634] INFO train iter: 650, num_batches_per_epoch: 25
+2020-03-25 14:14:13,939 [dl_trainer.py:635] INFO Epoch 26, avg train acc: 12.355469, lr: 0.100000, avg loss: 2.279946
+2020-03-25 14:14:16,844 [dl_trainer.py:822] INFO Epoch 26, lr: 0.100000, val loss: 2.263574, val top-1 acc: 12.934869, top-5 acc: 58.165059
+2020-03-25 14:14:34,039 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.907347, Speed: 1128.564749 images/s
+2020-03-25 14:14:34,040 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:14:34,040 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:14:36,491 [dl_trainer.py:634] INFO train iter: 675, num_batches_per_epoch: 25
+2020-03-25 14:14:36,492 [dl_trainer.py:635] INFO Epoch 27, avg train acc: 11.414062, lr: 0.100000, avg loss: 2.266841
+2020-03-25 14:14:39,404 [dl_trainer.py:822] INFO Epoch 27, lr: 0.100000, val loss: 2.362793, val top-1 acc: 9.968909, top-5 acc: 51.666932
+2020-03-25 14:14:43,209 [dl_trainer.py:732] WARNING [ 27][  680/   25][rank:0] loss: 2.247, average forward (0.004147) and backward (0.469925) time: 0.886191, iotime: 0.265934 
+2020-03-25 14:14:55,765 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.905186, Speed: 1131.258742 images/s
+2020-03-25 14:14:55,766 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:14:55,766 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:14:59,004 [dl_trainer.py:634] INFO train iter: 700, num_batches_per_epoch: 25
+2020-03-25 14:14:59,005 [dl_trainer.py:635] INFO Epoch 28, avg train acc: 13.625000, lr: 0.100000, avg loss: 2.238453
+2020-03-25 14:15:01,919 [dl_trainer.py:822] INFO Epoch 28, lr: 0.100000, val loss: 2.971532, val top-1 acc: 16.339684, top-5 acc: 69.856107
+2020-03-25 14:15:17,454 [dl_trainer.py:732] WARNING [ 28][  720/   25][rank:0] loss: 2.222, average forward (0.004155) and backward (0.471757) time: 0.816761, iotime: 0.267319 
+2020-03-25 14:15:17,496 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.905396, Speed: 1130.996532 images/s
+2020-03-25 14:15:17,496 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:15:17,497 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:15:21,515 [dl_trainer.py:634] INFO train iter: 725, num_batches_per_epoch: 25
+2020-03-25 14:15:21,516 [dl_trainer.py:635] INFO Epoch 29, avg train acc: 14.246094, lr: 0.100000, avg loss: 2.214924
+2020-03-25 14:15:24,431 [dl_trainer.py:822] INFO Epoch 29, lr: 0.100000, val loss: 2.307732, val top-1 acc: 11.457470, top-5 acc: 53.533163
+2020-03-25 14:15:39,217 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.905012, Speed: 1131.476832 images/s
+2020-03-25 14:15:39,218 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:15:39,218 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:15:44,011 [dl_trainer.py:634] INFO train iter: 750, num_batches_per_epoch: 25
+2020-03-25 14:15:44,012 [dl_trainer.py:635] INFO Epoch 30, avg train acc: 16.812500, lr: 0.100000, avg loss: 2.168006
+2020-03-25 14:15:46,928 [dl_trainer.py:822] INFO Epoch 30, lr: 0.100000, val loss: 2.330158, val top-1 acc: 10.056800, top-5 acc: 50.861567
+2020-03-25 14:15:54,630 [dl_trainer.py:732] WARNING [ 30][  760/   25][rank:0] loss: 2.131, average forward (0.004142) and backward (0.471429) time: 0.887301, iotime: 0.265283 
+2020-03-25 14:16:00,912 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.903907, Speed: 1132.860055 images/s
+2020-03-25 14:16:00,913 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:16:00,913 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:16:06,488 [dl_trainer.py:634] INFO train iter: 775, num_batches_per_epoch: 25
+2020-03-25 14:16:06,489 [dl_trainer.py:635] INFO Epoch 31, avg train acc: 16.175781, lr: 0.100000, avg loss: 2.163005
+2020-03-25 14:16:09,406 [dl_trainer.py:822] INFO Epoch 31, lr: 0.100000, val loss: 2.208843, val top-1 acc: 18.704959, top-5 acc: 70.458386
+2020-03-25 14:16:22,596 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.903455, Speed: 1133.426892 images/s
+2020-03-25 14:16:22,597 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:16:22,597 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:16:28,922 [dl_trainer.py:732] WARNING [ 31][  800/   25][rank:0] loss: 2.131, average forward (0.004178) and backward (0.467155) time: 0.810422, iotime: 0.265736 
+2020-03-25 14:16:28,973 [dl_trainer.py:634] INFO train iter: 800, num_batches_per_epoch: 25
+2020-03-25 14:16:28,973 [dl_trainer.py:635] INFO Epoch 32, avg train acc: 17.683594, lr: 0.100000, avg loss: 2.132933
+2020-03-25 14:16:31,892 [dl_trainer.py:822] INFO Epoch 32, lr: 0.100000, val loss: 2.116402, val top-1 acc: 18.497688, top-5 acc: 74.051937
+2020-03-25 14:16:44,349 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.906300, Speed: 1129.869182 images/s
+2020-03-25 14:16:44,349 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:16:44,349 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:16:51,493 [dl_trainer.py:634] INFO train iter: 825, num_batches_per_epoch: 25
+2020-03-25 14:16:51,494 [dl_trainer.py:635] INFO Epoch 33, avg train acc: 18.140625, lr: 0.100000, avg loss: 2.110926
+2020-03-25 14:16:54,440 [dl_trainer.py:822] INFO Epoch 33, lr: 0.100000, val loss: 2.169901, val top-1 acc: 17.153819, top-5 acc: 67.738959
+2020-03-25 14:17:06,053 [dl_trainer.py:732] WARNING [ 33][  840/   25][rank:0] loss: 2.065, average forward (0.004150) and backward (0.466316) time: 0.882270, iotime: 0.264417 
+2020-03-25 14:17:06,090 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.905842, Speed: 1130.439661 images/s
+2020-03-25 14:17:06,091 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:17:06,091 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:17:14,015 [dl_trainer.py:634] INFO train iter: 850, num_batches_per_epoch: 25
+2020-03-25 14:17:14,016 [dl_trainer.py:635] INFO Epoch 34, avg train acc: 19.886719, lr: 0.100000, avg loss: 2.088787
+2020-03-25 14:17:16,930 [dl_trainer.py:822] INFO Epoch 34, lr: 0.100000, val loss: 2.083432, val top-1 acc: 19.440768, top-5 acc: 74.220145
+2020-03-25 14:17:27,819 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.905344, Speed: 1131.062405 images/s
+2020-03-25 14:17:27,820 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:17:27,820 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:17:36,531 [dl_trainer.py:634] INFO train iter: 875, num_batches_per_epoch: 25
+2020-03-25 14:17:36,532 [dl_trainer.py:635] INFO Epoch 35, avg train acc: 19.253906, lr: 0.100000, avg loss: 2.060090
+2020-03-25 14:17:39,476 [dl_trainer.py:822] INFO Epoch 35, lr: 0.100000, val loss: 2.086317, val top-1 acc: 19.175104, top-5 acc: 75.434670
+2020-03-25 14:17:43,252 [dl_trainer.py:732] WARNING [ 35][  880/   25][rank:0] loss: 2.096, average forward (0.004160) and backward (0.465612) time: 0.881979, iotime: 0.265019 
+2020-03-25 14:17:49,546 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.905219, Speed: 1131.218221 images/s
+2020-03-25 14:17:49,547 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:17:49,547 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:17:59,030 [dl_trainer.py:634] INFO train iter: 900, num_batches_per_epoch: 25
+2020-03-25 14:17:59,031 [dl_trainer.py:635] INFO Epoch 36, avg train acc: 19.804688, lr: 0.100000, avg loss: 2.047987
+2020-03-25 14:18:01,952 [dl_trainer.py:822] INFO Epoch 36, lr: 0.100000, val loss: 2.079674, val top-1 acc: 19.354074, top-5 acc: 80.005182
+2020-03-25 14:18:11,254 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.904428, Speed: 1132.207933 images/s
+2020-03-25 14:18:11,254 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:18:11,254 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:18:17,566 [dl_trainer.py:732] WARNING [ 36][  920/   25][rank:0] loss: 2.011, average forward (0.004178) and backward (0.465386) time: 0.810978, iotime: 0.267706 
+2020-03-25 14:18:21,521 [dl_trainer.py:634] INFO train iter: 925, num_batches_per_epoch: 25
+2020-03-25 14:18:21,522 [dl_trainer.py:635] INFO Epoch 37, avg train acc: 20.332031, lr: 0.100000, avg loss: 2.026069
+2020-03-25 14:18:24,441 [dl_trainer.py:822] INFO Epoch 37, lr: 0.100000, val loss: 2.019285, val top-1 acc: 19.905931, top-5 acc: 81.384925
+2020-03-25 14:18:32,947 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.903823, Speed: 1132.964872 images/s
+2020-03-25 14:18:32,947 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:18:32,947 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:18:43,987 [dl_trainer.py:634] INFO train iter: 950, num_batches_per_epoch: 25
+2020-03-25 14:18:43,988 [dl_trainer.py:635] INFO Epoch 38, avg train acc: 19.277344, lr: 0.100000, avg loss: 2.013320
+2020-03-25 14:18:46,906 [dl_trainer.py:822] INFO Epoch 38, lr: 0.100000, val loss: 2.043916, val top-1 acc: 19.001116, top-5 acc: 81.241629
+2020-03-25 14:18:54,594 [dl_trainer.py:732] WARNING [ 38][  960/   25][rank:0] loss: 1.983, average forward (0.004156) and backward (0.465115) time: 0.880484, iotime: 0.264521 
+2020-03-25 14:18:54,642 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.903907, Speed: 1132.860416 images/s
+2020-03-25 14:18:54,642 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:18:54,642 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:19:06,448 [dl_trainer.py:634] INFO train iter: 975, num_batches_per_epoch: 25
+2020-03-25 14:19:06,449 [dl_trainer.py:635] INFO Epoch 39, avg train acc: 20.527344, lr: 0.100000, avg loss: 2.001857
+2020-03-25 14:19:09,369 [dl_trainer.py:822] INFO Epoch 39, lr: 0.100000, val loss: 2.009504, val top-1 acc: 19.809869, top-5 acc: 81.654576
+2020-03-25 14:19:16,307 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.902679, Speed: 1134.400936 images/s
+2020-03-25 14:19:16,307 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:19:16,307 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:19:28,876 [dl_trainer.py:732] WARNING [ 39][ 1000/   25][rank:0] loss: 1.987, average forward (0.004142) and backward (0.464282) time: 0.810291, iotime: 0.268361 
+2020-03-25 14:19:28,925 [dl_trainer.py:634] INFO train iter: 1000, num_batches_per_epoch: 25
+2020-03-25 14:19:28,925 [dl_trainer.py:635] INFO Epoch 40, avg train acc: 19.367188, lr: 0.100000, avg loss: 2.000536
+2020-03-25 14:19:31,848 [dl_trainer.py:822] INFO Epoch 40, lr: 0.100000, val loss: 1.987238, val top-1 acc: 19.887994, top-5 acc: 82.324617
+2020-03-25 14:19:38,027 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.904972, Speed: 1131.527135 images/s
+2020-03-25 14:19:38,028 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:19:38,028 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:19:51,390 [dl_trainer.py:634] INFO train iter: 1025, num_batches_per_epoch: 25
+2020-03-25 14:19:51,390 [dl_trainer.py:635] INFO Epoch 41, avg train acc: 20.277344, lr: 0.100000, avg loss: 1.990584
+2020-03-25 14:19:54,310 [dl_trainer.py:822] INFO Epoch 41, lr: 0.100000, val loss: 1.970422, val top-1 acc: 20.941885, top-5 acc: 82.372848
+2020-03-25 14:19:59,682 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.902240, Speed: 1134.953408 images/s
+2020-03-25 14:19:59,683 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:19:59,683 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:20:05,974 [dl_trainer.py:732] WARNING [ 41][ 1040/   25][rank:0] loss: 1.981, average forward (0.004177) and backward (0.464047) time: 0.883418, iotime: 0.268278 
+2020-03-25 14:20:13,788 [dl_trainer.py:634] INFO train iter: 1050, num_batches_per_epoch: 25
+2020-03-25 14:20:13,789 [dl_trainer.py:635] INFO Epoch 42, avg train acc: 20.582031, lr: 0.100000, avg loss: 1.982320
+2020-03-25 14:20:16,706 [dl_trainer.py:822] INFO Epoch 42, lr: 0.100000, val loss: 2.195496, val top-1 acc: 19.815250, top-5 acc: 78.446867
+2020-03-25 14:20:21,336 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.902196, Speed: 1135.008232 images/s
+2020-03-25 14:20:21,337 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:20:21,337 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:20:36,218 [dl_trainer.py:634] INFO train iter: 1075, num_batches_per_epoch: 25
+2020-03-25 14:20:36,219 [dl_trainer.py:635] INFO Epoch 43, avg train acc: 21.328125, lr: 0.100000, avg loss: 1.974500
+2020-03-25 14:20:39,147 [dl_trainer.py:822] INFO Epoch 43, lr: 0.100000, val loss: 1.978258, val top-1 acc: 21.499721, top-5 acc: 81.301817
+2020-03-25 14:20:42,930 [dl_trainer.py:732] WARNING [ 43][ 1080/   25][rank:0] loss: 1.940, average forward (0.004155) and backward (0.463171) time: 0.878907, iotime: 0.264673 
+2020-03-25 14:20:42,963 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.901069, Speed: 1136.427972 images/s
+2020-03-25 14:20:42,963 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:20:42,964 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:20:58,658 [dl_trainer.py:634] INFO train iter: 1100, num_batches_per_epoch: 25
+2020-03-25 14:20:58,658 [dl_trainer.py:635] INFO Epoch 44, avg train acc: 22.089844, lr: 0.100000, avg loss: 1.972143
+2020-03-25 14:21:01,912 [dl_trainer.py:822] INFO Epoch 44, lr: 0.100000, val loss: 1.972355, val top-1 acc: 22.187301, top-5 acc: 81.953723
+2020-03-25 14:21:05,002 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.918257, Speed: 1115.155807 images/s
+2020-03-25 14:21:05,003 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:21:05,003 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:21:17,577 [dl_trainer.py:732] WARNING [ 44][ 1120/   25][rank:0] loss: 1.977, average forward (0.004725) and backward (0.461884) time: 0.834691, iotime: 0.285921 
+2020-03-25 14:21:21,512 [dl_trainer.py:634] INFO train iter: 1125, num_batches_per_epoch: 25
+2020-03-25 14:21:21,512 [dl_trainer.py:635] INFO Epoch 45, avg train acc: 21.375000, lr: 0.100000, avg loss: 1.963687
+2020-03-25 14:21:24,744 [dl_trainer.py:822] INFO Epoch 45, lr: 0.100000, val loss: 1.945802, val top-1 acc: 22.302695, top-5 acc: 83.295798
+2020-03-25 14:21:27,042 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.918275, Speed: 1115.134128 images/s
+2020-03-25 14:21:27,042 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:21:27,042 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:21:44,278 [dl_trainer.py:634] INFO train iter: 1150, num_batches_per_epoch: 25
+2020-03-25 14:21:44,279 [dl_trainer.py:635] INFO Epoch 46, avg train acc: 21.804688, lr: 0.100000, avg loss: 1.950223
+2020-03-25 14:21:47,227 [dl_trainer.py:822] INFO Epoch 46, lr: 0.100000, val loss: 1.935719, val top-1 acc: 21.689652, top-5 acc: 83.377113
+2020-03-25 14:21:48,720 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.903210, Speed: 1133.733859 images/s
+2020-03-25 14:21:48,720 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:21:48,721 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:21:54,989 [dl_trainer.py:732] WARNING [ 46][ 1160/   25][rank:0] loss: 1.942, average forward (0.004574) and backward (0.462581) time: 0.903095, iotime: 0.280648 
+2020-03-25 14:22:06,657 [dl_trainer.py:634] INFO train iter: 1175, num_batches_per_epoch: 25
+2020-03-25 14:22:06,657 [dl_trainer.py:635] INFO Epoch 47, avg train acc: 22.035156, lr: 0.100000, avg loss: 1.945459
+2020-03-25 14:22:09,579 [dl_trainer.py:822] INFO Epoch 47, lr: 0.100000, val loss: 2.102112, val top-1 acc: 21.018614, top-5 acc: 81.080198
+2020-03-25 14:22:10,288 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.898618, Speed: 1139.528074 images/s
+2020-03-25 14:22:10,288 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:22:10,288 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:22:28,975 [dl_trainer.py:732] WARNING [ 47][ 1200/   25][rank:0] loss: 1.918, average forward (0.004145) and backward (0.463270) time: 0.807447, iotime: 0.266509 
+2020-03-25 14:22:29,014 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.780207, Speed: 1312.472991 images/s
+2020-03-25 14:22:29,014 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:22:29,014 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:22:29,015 [dl_trainer.py:634] INFO train iter: 1200, num_batches_per_epoch: 25
+2020-03-25 14:22:29,015 [dl_trainer.py:635] INFO Epoch 48, avg train acc: 22.117188, lr: 0.100000, avg loss: 1.945903
+2020-03-25 14:22:31,937 [dl_trainer.py:822] INFO Epoch 48, lr: 0.100000, val loss: 1.980297, val top-1 acc: 19.915697, top-5 acc: 81.080795
+2020-03-25 14:22:50,551 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.897333, Speed: 1141.159077 images/s
+2020-03-25 14:22:50,551 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:22:50,551 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:22:51,438 [dl_trainer.py:634] INFO train iter: 1225, num_batches_per_epoch: 25
+2020-03-25 14:22:51,439 [dl_trainer.py:635] INFO Epoch 49, avg train acc: 21.671875, lr: 0.100000, avg loss: 1.939519
+2020-03-25 14:22:54,366 [dl_trainer.py:822] INFO Epoch 49, lr: 0.100000, val loss: 1.945967, val top-1 acc: 22.456752, top-5 acc: 83.387675
+2020-03-25 14:23:05,874 [dl_trainer.py:732] WARNING [ 49][ 1240/   25][rank:0] loss: 1.941, average forward (0.004137) and backward (0.459964) time: 0.876178, iotime: 0.265152 
+2020-03-25 14:23:12,083 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.897120, Speed: 1141.430495 images/s
+2020-03-25 14:23:12,083 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:23:12,083 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:23:13,771 [dl_trainer.py:634] INFO train iter: 1250, num_batches_per_epoch: 25
+2020-03-25 14:23:13,772 [dl_trainer.py:635] INFO Epoch 50, avg train acc: 21.843750, lr: 0.100000, avg loss: 1.934054
+2020-03-25 14:23:16,690 [dl_trainer.py:822] INFO Epoch 50, lr: 0.100000, val loss: 1.916856, val top-1 acc: 22.394372, top-5 acc: 84.006497
+2020-03-25 14:23:33,615 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.897137, Speed: 1141.408440 images/s
+2020-03-25 14:23:33,616 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:23:33,616 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:23:36,048 [dl_trainer.py:634] INFO train iter: 1275, num_batches_per_epoch: 25
+2020-03-25 14:23:36,048 [dl_trainer.py:635] INFO Epoch 51, avg train acc: 22.449219, lr: 0.100000, avg loss: 1.922206
+2020-03-25 14:23:38,966 [dl_trainer.py:822] INFO Epoch 51, lr: 0.100000, val loss: 1.921163, val top-1 acc: 22.708267, top-5 acc: 83.814174
+2020-03-25 14:23:42,707 [dl_trainer.py:732] WARNING [ 51][ 1280/   25][rank:0] loss: 1.912, average forward (0.004138) and backward (0.458772) time: 0.872617, iotime: 0.263088 
+2020-03-25 14:23:55,095 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.894957, Speed: 1144.188751 images/s
+2020-03-25 14:23:55,096 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:23:55,096 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:23:58,293 [dl_trainer.py:634] INFO train iter: 1300, num_batches_per_epoch: 25
+2020-03-25 14:23:58,294 [dl_trainer.py:635] INFO Epoch 52, avg train acc: 22.628906, lr: 0.100000, avg loss: 1.923867
+2020-03-25 14:24:01,218 [dl_trainer.py:822] INFO Epoch 52, lr: 0.100000, val loss: 1.992241, val top-1 acc: 22.795560, top-5 acc: 82.549426
+2020-03-25 14:24:16,545 [dl_trainer.py:732] WARNING [ 52][ 1320/   25][rank:0] loss: 1.929, average forward (0.004148) and backward (0.457683) time: 0.801620, iotime: 0.266008 
+2020-03-25 14:24:16,586 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.895371, Speed: 1143.659977 images/s
+2020-03-25 14:24:16,586 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:24:16,586 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:24:20,554 [dl_trainer.py:634] INFO train iter: 1325, num_batches_per_epoch: 25
+2020-03-25 14:24:20,554 [dl_trainer.py:635] INFO Epoch 53, avg train acc: 22.855469, lr: 0.100000, avg loss: 1.923938
+2020-03-25 14:24:23,480 [dl_trainer.py:822] INFO Epoch 53, lr: 0.100000, val loss: 1.909377, val top-1 acc: 22.973334, top-5 acc: 84.116311
+2020-03-25 14:24:38,134 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.897830, Speed: 1140.527654 images/s
+2020-03-25 14:24:38,135 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:24:38,135 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:24:42,902 [dl_trainer.py:634] INFO train iter: 1350, num_batches_per_epoch: 25
+2020-03-25 14:24:42,902 [dl_trainer.py:635] INFO Epoch 54, avg train acc: 22.914062, lr: 0.100000, avg loss: 1.930640
+2020-03-25 14:24:45,830 [dl_trainer.py:822] INFO Epoch 54, lr: 0.100000, val loss: 2.643708, val top-1 acc: 18.867387, top-5 acc: 78.544523
+2020-03-25 14:24:53,465 [dl_trainer.py:732] WARNING [ 54][ 1360/   25][rank:0] loss: 1.943, average forward (0.004140) and backward (0.459540) time: 0.876106, iotime: 0.265403 
+2020-03-25 14:24:59,726 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.899597, Speed: 1138.287806 images/s
+2020-03-25 14:24:59,726 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:24:59,727 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:25:05,270 [dl_trainer.py:634] INFO train iter: 1375, num_batches_per_epoch: 25
+2020-03-25 14:25:05,271 [dl_trainer.py:635] INFO Epoch 55, avg train acc: 21.136719, lr: 0.100000, avg loss: 1.982726
+2020-03-25 14:25:08,211 [dl_trainer.py:822] INFO Epoch 55, lr: 0.100000, val loss: 1.979441, val top-1 acc: 22.208825, top-5 acc: 80.926140
+2020-03-25 14:25:21,386 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.902470, Speed: 1134.663990 images/s
+2020-03-25 14:25:21,387 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:25:21,387 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:25:27,688 [dl_trainer.py:732] WARNING [ 55][ 1400/   25][rank:0] loss: 2.014, average forward (0.004146) and backward (0.462777) time: 0.808641, iotime: 0.267792 
+2020-03-25 14:25:27,730 [dl_trainer.py:634] INFO train iter: 1400, num_batches_per_epoch: 25
+2020-03-25 14:25:27,730 [dl_trainer.py:635] INFO Epoch 56, avg train acc: 20.308594, lr: 0.100000, avg loss: 1.992775
+2020-03-25 14:25:30,651 [dl_trainer.py:822] INFO Epoch 56, lr: 0.100000, val loss: 2.146126, val top-1 acc: 18.125000, top-5 acc: 70.507015
+2020-03-25 14:25:43,046 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.902430, Speed: 1134.714352 images/s
+2020-03-25 14:25:43,047 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:25:43,047 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:25:50,162 [dl_trainer.py:634] INFO train iter: 1425, num_batches_per_epoch: 25
+2020-03-25 14:25:50,163 [dl_trainer.py:635] INFO Epoch 57, avg train acc: 20.550781, lr: 0.100000, avg loss: 2.050822
+2020-03-25 14:25:53,108 [dl_trainer.py:822] INFO Epoch 57, lr: 0.100000, val loss: 2.066242, val top-1 acc: 19.969906, top-5 acc: 80.362325
+2020-03-25 14:26:04,604 [dl_trainer.py:732] WARNING [ 57][ 1440/   25][rank:0] loss: 2.055, average forward (0.004162) and backward (0.463580) time: 0.876750, iotime: 0.261616 
+2020-03-25 14:26:04,678 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.901292, Speed: 1136.146856 images/s
+2020-03-25 14:26:04,679 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:26:04,679 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:26:12,600 [dl_trainer.py:634] INFO train iter: 1450, num_batches_per_epoch: 25
+2020-03-25 14:26:12,600 [dl_trainer.py:635] INFO Epoch 58, avg train acc: 18.160156, lr: 0.100000, avg loss: 2.165925
+2020-03-25 14:26:15,520 [dl_trainer.py:822] INFO Epoch 58, lr: 0.100000, val loss: 2.232824, val top-1 acc: 17.597258, top-5 acc: 70.099848
+2020-03-25 14:26:26,354 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.903113, Speed: 1133.856311 images/s
+2020-03-25 14:26:26,354 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:26:26,355 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:26:34,993 [dl_trainer.py:634] INFO train iter: 1475, num_batches_per_epoch: 25
+2020-03-25 14:26:34,994 [dl_trainer.py:635] INFO Epoch 59, avg train acc: 17.867188, lr: 0.100000, avg loss: 2.102705
+2020-03-25 14:26:37,910 [dl_trainer.py:822] INFO Epoch 59, lr: 0.100000, val loss: 2.127269, val top-1 acc: 17.240115, top-5 acc: 76.287468
+2020-03-25 14:26:41,676 [dl_trainer.py:732] WARNING [ 59][ 1480/   25][rank:0] loss: 2.139, average forward (0.004168) and backward (0.462210) time: 0.878999, iotime: 0.266029 
+2020-03-25 14:26:47,934 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.899110, Speed: 1138.903424 images/s
+2020-03-25 14:26:47,934 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:26:47,934 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:26:57,378 [dl_trainer.py:634] INFO train iter: 1500, num_batches_per_epoch: 25
+2020-03-25 14:26:57,379 [dl_trainer.py:635] INFO Epoch 60, avg train acc: 17.320312, lr: 0.100000, avg loss: 2.176270
+2020-03-25 14:27:00,302 [dl_trainer.py:822] INFO Epoch 60, lr: 0.100000, val loss: 2.292275, val top-1 acc: 14.549187, top-5 acc: 59.902742
+2020-03-25 14:27:09,583 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.902012, Speed: 1135.239885 images/s
+2020-03-25 14:27:09,584 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:27:09,584 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:27:15,819 [dl_trainer.py:732] WARNING [ 60][ 1520/   25][rank:0] loss: 2.207, average forward (0.004172) and backward (0.461661) time: 0.806139, iotime: 0.266534 
+2020-03-25 14:27:19,737 [dl_trainer.py:634] INFO train iter: 1525, num_batches_per_epoch: 25
+2020-03-25 14:27:19,737 [dl_trainer.py:635] INFO Epoch 61, avg train acc: 18.765625, lr: 0.100000, avg loss: 2.212655
+2020-03-25 14:27:22,660 [dl_trainer.py:822] INFO Epoch 61, lr: 0.100000, val loss: 2.349959, val top-1 acc: 16.174665, top-5 acc: 73.564652
+2020-03-25 14:27:31,182 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.899915, Speed: 1137.884730 images/s
+2020-03-25 14:27:31,183 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:27:31,183 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:27:42,107 [dl_trainer.py:634] INFO train iter: 1550, num_batches_per_epoch: 25
+2020-03-25 14:27:42,107 [dl_trainer.py:635] INFO Epoch 62, avg train acc: 17.242188, lr: 0.100000, avg loss: 2.179677
+2020-03-25 14:27:45,024 [dl_trainer.py:822] INFO Epoch 62, lr: 0.100000, val loss: 2.622566, val top-1 acc: 18.136360, top-5 acc: 74.139629
+2020-03-25 14:27:52,606 [dl_trainer.py:732] WARNING [ 62][ 1560/   25][rank:0] loss: 2.107, average forward (0.004135) and backward (0.459639) time: 0.875088, iotime: 0.264649 
+2020-03-25 14:27:52,668 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.895194, Speed: 1143.886125 images/s
+2020-03-25 14:27:52,669 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:27:52,669 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:28:04,334 [dl_trainer.py:634] INFO train iter: 1575, num_batches_per_epoch: 25
+2020-03-25 14:28:04,335 [dl_trainer.py:635] INFO Epoch 63, avg train acc: 19.468750, lr: 0.100000, avg loss: 2.069411
+2020-03-25 14:28:07,265 [dl_trainer.py:822] INFO Epoch 63, lr: 0.100000, val loss: 2.080071, val top-1 acc: 19.923868, top-5 acc: 74.492387
+2020-03-25 14:28:14,120 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.893802, Speed: 1145.667956 images/s
+2020-03-25 14:28:14,121 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:28:14,121 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:28:26,481 [dl_trainer.py:732] WARNING [ 63][ 1600/   25][rank:0] loss: 2.004, average forward (0.004147) and backward (0.455003) time: 0.799885, iotime: 0.267063 
+2020-03-25 14:28:26,530 [dl_trainer.py:634] INFO train iter: 1600, num_batches_per_epoch: 25
+2020-03-25 14:28:26,530 [dl_trainer.py:635] INFO Epoch 64, avg train acc: 21.234375, lr: 0.100000, avg loss: 2.005529
+2020-03-25 14:28:29,454 [dl_trainer.py:822] INFO Epoch 64, lr: 0.100000, val loss: 2.011670, val top-1 acc: 21.408243, top-5 acc: 81.368582
+2020-03-25 14:28:35,524 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891744, Speed: 1148.311882 images/s
+2020-03-25 14:28:35,524 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:28:35,524 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:28:48,689 [dl_trainer.py:634] INFO train iter: 1625, num_batches_per_epoch: 25
+2020-03-25 14:28:48,690 [dl_trainer.py:635] INFO Epoch 65, avg train acc: 22.527344, lr: 0.100000, avg loss: 1.963257
+2020-03-25 14:28:51,604 [dl_trainer.py:822] INFO Epoch 65, lr: 0.100000, val loss: 1.943341, val top-1 acc: 23.516621, top-5 acc: 82.992666
+2020-03-25 14:28:56,905 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890856, Speed: 1149.456154 images/s
+2020-03-25 14:28:56,906 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:28:56,906 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:29:03,128 [dl_trainer.py:732] WARNING [ 65][ 1640/   25][rank:0] loss: 1.953, average forward (0.004173) and backward (0.453505) time: 0.871231, iotime: 0.266842 
+2020-03-25 14:29:10,838 [dl_trainer.py:634] INFO train iter: 1650, num_batches_per_epoch: 25
+2020-03-25 14:29:10,839 [dl_trainer.py:635] INFO Epoch 66, avg train acc: 22.628906, lr: 0.100000, avg loss: 1.952599
+2020-03-25 14:29:13,754 [dl_trainer.py:822] INFO Epoch 66, lr: 0.100000, val loss: 1.931267, val top-1 acc: 22.770049, top-5 acc: 83.269890
+2020-03-25 14:29:18,294 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891169, Speed: 1149.052970 images/s
+2020-03-25 14:29:18,295 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:29:18,295 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:29:32,984 [dl_trainer.py:634] INFO train iter: 1675, num_batches_per_epoch: 25
+2020-03-25 14:29:32,984 [dl_trainer.py:635] INFO Epoch 67, avg train acc: 23.007812, lr: 0.100000, avg loss: 1.936878
+2020-03-25 14:29:35,898 [dl_trainer.py:822] INFO Epoch 67, lr: 0.100000, val loss: 1.922529, val top-1 acc: 23.083147, top-5 acc: 83.488321
+2020-03-25 14:29:39,628 [dl_trainer.py:732] WARNING [ 67][ 1680/   25][rank:0] loss: 1.873, average forward (0.004157) and backward (0.453786) time: 0.867690, iotime: 0.263321 
+2020-03-25 14:29:39,661 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890222, Speed: 1150.275423 images/s
+2020-03-25 14:29:39,661 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:29:39,661 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:29:55,099 [dl_trainer.py:634] INFO train iter: 1700, num_batches_per_epoch: 25
+2020-03-25 14:29:55,100 [dl_trainer.py:635] INFO Epoch 68, avg train acc: 23.167969, lr: 0.100000, avg loss: 1.928236
+2020-03-25 14:29:58,024 [dl_trainer.py:822] INFO Epoch 68, lr: 0.100000, val loss: 1.928354, val top-1 acc: 23.507653, top-5 acc: 83.734654
+2020-03-25 14:30:01,056 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891439, Speed: 1148.705085 images/s
+2020-03-25 14:30:01,056 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:30:01,056 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:30:13,416 [dl_trainer.py:732] WARNING [ 68][ 1720/   25][rank:0] loss: 1.929, average forward (0.004179) and backward (0.453992) time: 0.800867, iotime: 0.268814 
+2020-03-25 14:30:17,300 [dl_trainer.py:634] INFO train iter: 1725, num_batches_per_epoch: 25
+2020-03-25 14:30:17,300 [dl_trainer.py:635] INFO Epoch 69, avg train acc: 23.156250, lr: 0.100000, avg loss: 1.924890
+2020-03-25 14:30:20,214 [dl_trainer.py:822] INFO Epoch 69, lr: 0.100000, val loss: 1.962797, val top-1 acc: 23.101283, top-5 acc: 83.545320
+2020-03-25 14:30:22,446 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891203, Speed: 1149.008743 images/s
+2020-03-25 14:30:22,446 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:30:22,446 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:30:39,459 [dl_trainer.py:634] INFO train iter: 1750, num_batches_per_epoch: 25
+2020-03-25 14:30:39,460 [dl_trainer.py:635] INFO Epoch 70, avg train acc: 23.312500, lr: 0.100000, avg loss: 1.912994
+2020-03-25 14:30:42,384 [dl_trainer.py:822] INFO Epoch 70, lr: 0.100000, val loss: 1.988867, val top-1 acc: 23.026148, top-5 acc: 82.999242
+2020-03-25 14:30:43,855 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892029, Speed: 1147.944426 images/s
+2020-03-25 14:30:43,856 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:30:43,856 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:30:50,087 [dl_trainer.py:732] WARNING [ 70][ 1760/   25][rank:0] loss: 1.926, average forward (0.004182) and backward (0.454395) time: 0.870689, iotime: 0.265430 
+2020-03-25 14:31:01,694 [dl_trainer.py:634] INFO train iter: 1775, num_batches_per_epoch: 25
+2020-03-25 14:31:01,695 [dl_trainer.py:635] INFO Epoch 71, avg train acc: 22.949219, lr: 0.100000, avg loss: 1.917117
+2020-03-25 14:31:04,980 [dl_trainer.py:822] INFO Epoch 71, lr: 0.100000, val loss: 2.115448, val top-1 acc: 22.542451, top-5 acc: 81.476004
+2020-03-25 14:31:05,766 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.912902, Speed: 1121.697415 images/s
+2020-03-25 14:31:05,766 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:31:05,767 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:31:24,401 [dl_trainer.py:732] WARNING [ 71][ 1800/   25][rank:0] loss: 1.924, average forward (0.004197) and backward (0.455026) time: 0.812084, iotime: 0.270312 
+2020-03-25 14:31:24,451 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.778492, Speed: 1315.362787 images/s
+2020-03-25 14:31:24,451 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:31:24,451 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:31:24,452 [dl_trainer.py:634] INFO train iter: 1800, num_batches_per_epoch: 25
+2020-03-25 14:31:24,452 [dl_trainer.py:635] INFO Epoch 72, avg train acc: 22.601562, lr: 0.100000, avg loss: 1.919054
+2020-03-25 14:31:27,363 [dl_trainer.py:822] INFO Epoch 72, lr: 0.100000, val loss: 1.952252, val top-1 acc: 22.436623, top-5 acc: 83.982382
+2020-03-25 14:31:45,840 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891175, Speed: 1149.044286 images/s
+2020-03-25 14:31:45,841 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:31:45,841 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:31:46,722 [dl_trainer.py:634] INFO train iter: 1825, num_batches_per_epoch: 25
+2020-03-25 14:31:46,723 [dl_trainer.py:635] INFO Epoch 73, avg train acc: 22.648438, lr: 0.100000, avg loss: 1.907096
+2020-03-25 14:31:49,637 [dl_trainer.py:822] INFO Epoch 73, lr: 0.100000, val loss: 1.926375, val top-1 acc: 21.876993, top-5 acc: 84.879225
+2020-03-25 14:32:01,097 [dl_trainer.py:732] WARNING [ 73][ 1840/   25][rank:0] loss: 1.934, average forward (0.004142) and backward (0.455165) time: 0.868561, iotime: 0.262958 
+2020-03-25 14:32:07,286 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.893511, Speed: 1146.040251 images/s
+2020-03-25 14:32:07,286 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:32:07,286 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:32:08,944 [dl_trainer.py:634] INFO train iter: 1850, num_batches_per_epoch: 25
+2020-03-25 14:32:08,945 [dl_trainer.py:635] INFO Epoch 74, avg train acc: 23.023438, lr: 0.100000, avg loss: 1.908032
+2020-03-25 14:32:11,859 [dl_trainer.py:822] INFO Epoch 74, lr: 0.100000, val loss: 2.448243, val top-1 acc: 18.735053, top-5 acc: 77.912747
+2020-03-25 14:32:28,774 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.895314, Speed: 1143.733108 images/s
+2020-03-25 14:32:28,775 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:32:28,775 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:32:31,207 [dl_trainer.py:634] INFO train iter: 1875, num_batches_per_epoch: 25
+2020-03-25 14:32:31,208 [dl_trainer.py:635] INFO Epoch 75, avg train acc: 22.234375, lr: 0.100000, avg loss: 1.934102
+2020-03-25 14:32:34,125 [dl_trainer.py:822] INFO Epoch 75, lr: 0.100000, val loss: 1.955049, val top-1 acc: 22.625757, top-5 acc: 82.208626
+2020-03-25 14:32:37,863 [dl_trainer.py:732] WARNING [ 75][ 1880/   25][rank:0] loss: 1.919, average forward (0.004177) and backward (0.456354) time: 0.874158, iotime: 0.267109 
+2020-03-25 14:32:50,258 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.895111, Speed: 1143.991824 images/s
+2020-03-25 14:32:50,259 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:32:50,259 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:32:53,485 [dl_trainer.py:634] INFO train iter: 1900, num_batches_per_epoch: 25
+2020-03-25 14:32:53,486 [dl_trainer.py:635] INFO Epoch 76, avg train acc: 22.039062, lr: 0.100000, avg loss: 1.943206
+2020-03-25 14:32:56,400 [dl_trainer.py:822] INFO Epoch 76, lr: 0.100000, val loss: 2.001796, val top-1 acc: 21.333705, top-5 acc: 83.272680
+2020-03-25 14:33:11,748 [dl_trainer.py:732] WARNING [ 76][ 1920/   25][rank:0] loss: 1.991, average forward (0.004134) and backward (0.456749) time: 0.799910, iotime: 0.265496 
+2020-03-25 14:33:11,810 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.897953, Speed: 1140.371914 images/s
+2020-03-25 14:33:11,811 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:33:11,811 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:33:15,793 [dl_trainer.py:634] INFO train iter: 1925, num_batches_per_epoch: 25
+2020-03-25 14:33:15,794 [dl_trainer.py:635] INFO Epoch 77, avg train acc: 22.789062, lr: 0.100000, avg loss: 1.947114
+2020-03-25 14:33:18,700 [dl_trainer.py:822] INFO Epoch 77, lr: 0.100000, val loss: 1.906097, val top-1 acc: 24.062699, top-5 acc: 84.448940
+2020-03-25 14:33:33,327 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.896488, Speed: 1142.234943 images/s
+2020-03-25 14:33:33,327 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:33:33,328 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:33:38,069 [dl_trainer.py:634] INFO train iter: 1950, num_batches_per_epoch: 25
+2020-03-25 14:33:38,070 [dl_trainer.py:635] INFO Epoch 78, avg train acc: 21.734375, lr: 0.100000, avg loss: 1.947889
+2020-03-25 14:33:41,000 [dl_trainer.py:822] INFO Epoch 78, lr: 0.100000, val loss: 1.908352, val top-1 acc: 25.720863, top-5 acc: 83.458825
+2020-03-25 14:33:48,621 [dl_trainer.py:732] WARNING [ 78][ 1960/   25][rank:0] loss: 1.875, average forward (0.004121) and backward (0.457199) time: 0.873287, iotime: 0.265355 
+2020-03-25 14:33:54,885 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.898210, Speed: 1140.045517 images/s
+2020-03-25 14:33:54,886 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:33:54,886 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:34:00,392 [dl_trainer.py:634] INFO train iter: 1975, num_batches_per_epoch: 25
+2020-03-25 14:34:00,393 [dl_trainer.py:635] INFO Epoch 79, avg train acc: 23.859375, lr: 0.100000, avg loss: 1.927674
+2020-03-25 14:34:03,301 [dl_trainer.py:822] INFO Epoch 79, lr: 0.100000, val loss: 1.971316, val top-1 acc: 23.533163, top-5 acc: 83.377910
+2020-03-25 14:34:16,362 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.894816, Speed: 1144.368861 images/s
+2020-03-25 14:34:16,362 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:34:16,362 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:34:22,599 [dl_trainer.py:732] WARNING [ 79][ 2000/   25][rank:0] loss: 1.880, average forward (0.004122) and backward (0.456512) time: 0.798766, iotime: 0.264988 
+2020-03-25 14:34:22,649 [dl_trainer.py:634] INFO train iter: 2000, num_batches_per_epoch: 25
+2020-03-25 14:34:22,649 [dl_trainer.py:635] INFO Epoch 80, avg train acc: 24.843750, lr: 0.100000, avg loss: 1.898197
+2020-03-25 14:34:25,587 [dl_trainer.py:822] INFO Epoch 80, lr: 0.100000, val loss: 1.849270, val top-1 acc: 26.436145, top-5 acc: 86.312380
+2020-03-25 14:34:37,832 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.894539, Speed: 1144.723937 images/s
+2020-03-25 14:34:37,832 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:34:37,832 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:34:44,896 [dl_trainer.py:634] INFO train iter: 2025, num_batches_per_epoch: 25
+2020-03-25 14:34:44,897 [dl_trainer.py:635] INFO Epoch 81, avg train acc: 24.554688, lr: 0.100000, avg loss: 1.880385
+2020-03-25 14:34:47,769 [dl_trainer.py:822] INFO Epoch 81, lr: 0.100000, val loss: 1.862099, val top-1 acc: 24.622130, top-5 acc: 85.855589
+2020-03-25 14:34:59,207 [dl_trainer.py:732] WARNING [ 81][ 2040/   25][rank:0] loss: 1.874, average forward (0.004114) and backward (0.455013) time: 0.867475, iotime: 0.262387 
+2020-03-25 14:34:59,252 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892472, Speed: 1147.374473 images/s
+2020-03-25 14:34:59,252 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:34:59,252 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:35:07,068 [dl_trainer.py:634] INFO train iter: 2050, num_batches_per_epoch: 25
+2020-03-25 14:35:07,068 [dl_trainer.py:635] INFO Epoch 82, avg train acc: 26.804688, lr: 0.010000, avg loss: 1.856541
+2020-03-25 14:35:09,966 [dl_trainer.py:822] INFO Epoch 82, lr: 0.010000, val loss: 1.823684, val top-1 acc: 27.908960, top-5 acc: 86.440729
+2020-03-25 14:35:20,606 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889722, Speed: 1150.920914 images/s
+2020-03-25 14:35:20,607 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:35:20,607 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:35:29,190 [dl_trainer.py:634] INFO train iter: 2075, num_batches_per_epoch: 25
+2020-03-25 14:35:29,190 [dl_trainer.py:635] INFO Epoch 83, avg train acc: 27.835938, lr: 0.010000, avg loss: 1.841052
+2020-03-25 14:35:32,110 [dl_trainer.py:822] INFO Epoch 83, lr: 0.010000, val loss: 1.826912, val top-1 acc: 28.302575, top-5 acc: 86.080198
+2020-03-25 14:35:35,832 [dl_trainer.py:732] WARNING [ 83][ 2080/   25][rank:0] loss: 1.853, average forward (0.004136) and backward (0.454004) time: 0.867415, iotime: 0.263127 
+2020-03-25 14:35:42,066 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.894123, Speed: 1145.256851 images/s
+2020-03-25 14:35:42,067 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:35:42,067 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:35:51,426 [dl_trainer.py:634] INFO train iter: 2100, num_batches_per_epoch: 25
+2020-03-25 14:35:51,427 [dl_trainer.py:635] INFO Epoch 84, avg train acc: 28.121094, lr: 0.010000, avg loss: 1.838826
+2020-03-25 14:35:54,337 [dl_trainer.py:822] INFO Epoch 84, lr: 0.010000, val loss: 1.822111, val top-1 acc: 28.428731, top-5 acc: 86.197385
+2020-03-25 14:36:03,514 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.893608, Speed: 1145.916682 images/s
+2020-03-25 14:36:03,515 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:36:03,515 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:36:09,720 [dl_trainer.py:732] WARNING [ 84][ 2120/   25][rank:0] loss: 1.836, average forward (0.004136) and backward (0.453618) time: 0.797479, iotime: 0.266304 
+2020-03-25 14:36:13,596 [dl_trainer.py:634] INFO train iter: 2125, num_batches_per_epoch: 25
+2020-03-25 14:36:13,597 [dl_trainer.py:635] INFO Epoch 85, avg train acc: 27.851562, lr: 0.010000, avg loss: 1.840404
+2020-03-25 14:36:16,510 [dl_trainer.py:822] INFO Epoch 85, lr: 0.010000, val loss: 1.819396, val top-1 acc: 28.380700, top-5 acc: 86.207151
+2020-03-25 14:36:24,883 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890328, Speed: 1150.138389 images/s
+2020-03-25 14:36:24,884 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:36:24,884 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:36:35,746 [dl_trainer.py:634] INFO train iter: 2150, num_batches_per_epoch: 25
+2020-03-25 14:36:35,747 [dl_trainer.py:635] INFO Epoch 86, avg train acc: 28.199219, lr: 0.010000, avg loss: 1.834921
+2020-03-25 14:36:38,667 [dl_trainer.py:822] INFO Epoch 86, lr: 0.010000, val loss: 1.818318, val top-1 acc: 28.540737, top-5 acc: 86.376156
+2020-03-25 14:36:46,255 [dl_trainer.py:732] WARNING [ 86][ 2160/   25][rank:0] loss: 1.811, average forward (0.004146) and backward (0.453290) time: 0.868198, iotime: 0.264155 
+2020-03-25 14:36:46,301 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892375, Speed: 1147.499353 images/s
+2020-03-25 14:36:46,302 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:36:46,302 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:36:57,936 [dl_trainer.py:634] INFO train iter: 2175, num_batches_per_epoch: 25
+2020-03-25 14:36:57,936 [dl_trainer.py:635] INFO Epoch 87, avg train acc: 28.238281, lr: 0.010000, avg loss: 1.841261
+2020-03-25 14:37:00,848 [dl_trainer.py:822] INFO Epoch 87, lr: 0.010000, val loss: 1.817054, val top-1 acc: 28.485132, top-5 acc: 86.187620
+2020-03-25 14:37:07,701 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891616, Speed: 1148.475954 images/s
+2020-03-25 14:37:07,701 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:37:07,702 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:37:20,081 [dl_trainer.py:732] WARNING [ 87][ 2200/   25][rank:0] loss: 1.864, average forward (0.004145) and backward (0.453644) time: 0.797817, iotime: 0.266785 
+2020-03-25 14:37:20,124 [dl_trainer.py:634] INFO train iter: 2200, num_batches_per_epoch: 25
+2020-03-25 14:37:20,125 [dl_trainer.py:635] INFO Epoch 88, avg train acc: 28.175781, lr: 0.010000, avg loss: 1.834247
+2020-03-25 14:37:23,040 [dl_trainer.py:822] INFO Epoch 88, lr: 0.010000, val loss: 1.813714, val top-1 acc: 28.361966, top-5 acc: 86.190609
+2020-03-25 14:37:29,187 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.895230, Speed: 1143.839921 images/s
+2020-03-25 14:37:29,188 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:37:29,188 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:37:42,414 [dl_trainer.py:634] INFO train iter: 2225, num_batches_per_epoch: 25
+2020-03-25 14:37:42,415 [dl_trainer.py:635] INFO Epoch 89, avg train acc: 28.476562, lr: 0.010000, avg loss: 1.840030
+2020-03-25 14:37:45,342 [dl_trainer.py:822] INFO Epoch 89, lr: 0.010000, val loss: 1.813754, val top-1 acc: 28.450654, top-5 acc: 86.258968
+2020-03-25 14:37:50,620 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892971, Speed: 1146.733782 images/s
+2020-03-25 14:37:50,621 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:37:50,621 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:37:56,810 [dl_trainer.py:732] WARNING [ 89][ 2240/   25][rank:0] loss: 1.780, average forward (0.004174) and backward (0.453597) time: 0.871436, iotime: 0.266748 
+2020-03-25 14:38:04,488 [dl_trainer.py:634] INFO train iter: 2250, num_batches_per_epoch: 25
+2020-03-25 14:38:04,489 [dl_trainer.py:635] INFO Epoch 90, avg train acc: 28.484375, lr: 0.010000, avg loss: 1.825832
+2020-03-25 14:38:07,405 [dl_trainer.py:822] INFO Epoch 90, lr: 0.010000, val loss: 1.808721, val top-1 acc: 28.398836, top-5 acc: 86.239437
+2020-03-25 14:38:11,899 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.886550, Speed: 1155.039560 images/s
+2020-03-25 14:38:11,899 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:38:11,900 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:38:26,587 [dl_trainer.py:634] INFO train iter: 2275, num_batches_per_epoch: 25
+2020-03-25 14:38:26,588 [dl_trainer.py:635] INFO Epoch 91, avg train acc: 28.015625, lr: 0.010000, avg loss: 1.832871
+2020-03-25 14:38:29,534 [dl_trainer.py:822] INFO Epoch 91, lr: 0.010000, val loss: 1.808566, val top-1 acc: 28.528779, top-5 acc: 86.312978
+2020-03-25 14:38:33,258 [dl_trainer.py:732] WARNING [ 91][ 2280/   25][rank:0] loss: 1.799, average forward (0.004151) and backward (0.453609) time: 0.866621, iotime: 0.261621 
+2020-03-25 14:38:33,314 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892267, Speed: 1147.638085 images/s
+2020-03-25 14:38:33,315 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:38:33,315 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:38:48,741 [dl_trainer.py:634] INFO train iter: 2300, num_batches_per_epoch: 25
+2020-03-25 14:38:48,742 [dl_trainer.py:635] INFO Epoch 92, avg train acc: 28.113281, lr: 0.010000, avg loss: 1.837546
+2020-03-25 14:38:51,653 [dl_trainer.py:822] INFO Epoch 92, lr: 0.010000, val loss: 1.808691, val top-1 acc: 28.684232, top-5 acc: 86.298031
+2020-03-25 14:38:54,646 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888799, Speed: 1152.116016 images/s
+2020-03-25 14:38:54,647 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:38:54,647 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:39:06,977 [dl_trainer.py:732] WARNING [ 92][ 2320/   25][rank:0] loss: 1.841, average forward (0.004142) and backward (0.453216) time: 0.796921, iotime: 0.266121 
+2020-03-25 14:39:10,823 [dl_trainer.py:634] INFO train iter: 2325, num_batches_per_epoch: 25
+2020-03-25 14:39:10,824 [dl_trainer.py:635] INFO Epoch 93, avg train acc: 28.312500, lr: 0.010000, avg loss: 1.830258
+2020-03-25 14:39:13,744 [dl_trainer.py:822] INFO Epoch 93, lr: 0.010000, val loss: 1.802213, val top-1 acc: 29.004903, top-5 acc: 86.414421
+2020-03-25 14:39:15,969 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888400, Speed: 1152.633435 images/s
+2020-03-25 14:39:15,969 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:39:15,970 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:39:32,937 [dl_trainer.py:634] INFO train iter: 2350, num_batches_per_epoch: 25
+2020-03-25 14:39:32,938 [dl_trainer.py:635] INFO Epoch 94, avg train acc: 28.636719, lr: 0.010000, avg loss: 1.826051
+2020-03-25 14:39:35,845 [dl_trainer.py:822] INFO Epoch 94, lr: 0.010000, val loss: 1.801674, val top-1 acc: 28.900470, top-5 acc: 86.340083
+2020-03-25 14:39:37,314 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889352, Speed: 1151.400193 images/s
+2020-03-25 14:39:37,315 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:39:37,315 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:39:43,499 [dl_trainer.py:732] WARNING [ 94][ 2360/   25][rank:0] loss: 1.819, average forward (0.004141) and backward (0.453478) time: 0.867826, iotime: 0.263835 
+2020-03-25 14:39:55,017 [dl_trainer.py:634] INFO train iter: 2375, num_batches_per_epoch: 25
+2020-03-25 14:39:55,018 [dl_trainer.py:635] INFO Epoch 95, avg train acc: 28.601562, lr: 0.010000, avg loss: 1.825375
+2020-03-25 14:39:57,940 [dl_trainer.py:822] INFO Epoch 95, lr: 0.010000, val loss: 1.801479, val top-1 acc: 28.895288, top-5 acc: 86.528619
+2020-03-25 14:39:58,638 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888449, Speed: 1152.569820 images/s
+2020-03-25 14:39:58,639 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:39:58,639 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:40:17,025 [dl_trainer.py:732] WARNING [ 95][ 2400/   25][rank:0] loss: 1.841, average forward (0.004161) and backward (0.453794) time: 0.796794, iotime: 0.265339 
+2020-03-25 14:40:17,105 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.769418, Speed: 1330.875839 images/s
+2020-03-25 14:40:17,106 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:40:17,106 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:40:17,106 [dl_trainer.py:634] INFO train iter: 2400, num_batches_per_epoch: 25
+2020-03-25 14:40:17,107 [dl_trainer.py:635] INFO Epoch 96, avg train acc: 28.714844, lr: 0.010000, avg loss: 1.822485
+2020-03-25 14:40:20,027 [dl_trainer.py:822] INFO Epoch 96, lr: 0.010000, val loss: 1.798272, val top-1 acc: 29.052136, top-5 acc: 86.521843
+2020-03-25 14:40:38,441 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888978, Speed: 1151.884556 images/s
+2020-03-25 14:40:38,442 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:40:38,442 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:40:39,326 [dl_trainer.py:634] INFO train iter: 2425, num_batches_per_epoch: 25
+2020-03-25 14:40:39,326 [dl_trainer.py:635] INFO Epoch 97, avg train acc: 28.460938, lr: 0.010000, avg loss: 1.830323
+2020-03-25 14:40:42,250 [dl_trainer.py:822] INFO Epoch 97, lr: 0.010000, val loss: 1.798917, val top-1 acc: 29.776985, top-5 acc: 86.531609
+2020-03-25 14:40:53,599 [dl_trainer.py:732] WARNING [ 97][ 2440/   25][rank:0] loss: 1.808, average forward (0.004160) and backward (0.453712) time: 0.867623, iotime: 0.262969 
+2020-03-25 14:40:59,760 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888240, Speed: 1152.841459 images/s
+2020-03-25 14:40:59,761 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:40:59,761 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:41:01,401 [dl_trainer.py:634] INFO train iter: 2450, num_batches_per_epoch: 25
+2020-03-25 14:41:01,401 [dl_trainer.py:635] INFO Epoch 98, avg train acc: 28.582031, lr: 0.010000, avg loss: 1.827201
+2020-03-25 14:41:04,609 [dl_trainer.py:822] INFO Epoch 98, lr: 0.010000, val loss: 1.794563, val top-1 acc: 29.140027, top-5 acc: 86.738879
+2020-03-25 14:41:21,531 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.907083, Speed: 1128.893245 images/s
+2020-03-25 14:41:21,532 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:41:21,532 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:41:23,945 [dl_trainer.py:634] INFO train iter: 2475, num_batches_per_epoch: 25
+2020-03-25 14:41:23,946 [dl_trainer.py:635] INFO Epoch 99, avg train acc: 28.964844, lr: 0.010000, avg loss: 1.815536
+2020-03-25 14:41:26,855 [dl_trainer.py:822] INFO Epoch 99, lr: 0.010000, val loss: 1.792425, val top-1 acc: 29.677136, top-5 acc: 86.898916
+2020-03-25 14:41:30,593 [dl_trainer.py:732] WARNING [ 99][ 2480/   25][rank:0] loss: 1.869, average forward (0.004205) and backward (0.453639) time: 0.882826, iotime: 0.271280 
+2020-03-25 14:41:42,955 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892582, Speed: 1147.233954 images/s
+2020-03-25 14:41:42,956 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:41:42,956 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:41:46,137 [dl_trainer.py:634] INFO train iter: 2500, num_batches_per_epoch: 25
+2020-03-25 14:41:46,137 [dl_trainer.py:635] INFO Epoch 100, avg train acc: 29.031250, lr: 0.010000, avg loss: 1.824172
+2020-03-25 14:41:49,074 [dl_trainer.py:822] INFO Epoch 100, lr: 0.010000, val loss: 1.792134, val top-1 acc: 29.700454, top-5 acc: 86.840322
+2020-03-25 14:42:04,274 [dl_trainer.py:732] WARNING [100][ 2520/   25][rank:0] loss: 1.815, average forward (0.004148) and backward (0.453843) time: 0.792717, iotime: 0.260618 
+2020-03-25 14:42:04,333 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890709, Speed: 1149.645337 images/s
+2020-03-25 14:42:04,334 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:42:04,334 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:42:08,286 [dl_trainer.py:634] INFO train iter: 2525, num_batches_per_epoch: 25
+2020-03-25 14:42:08,287 [dl_trainer.py:635] INFO Epoch 101, avg train acc: 29.136719, lr: 0.010000, avg loss: 1.809377
+2020-03-25 14:42:11,205 [dl_trainer.py:822] INFO Epoch 101, lr: 0.010000, val loss: 1.788060, val top-1 acc: 30.092474, top-5 acc: 86.953723
+2020-03-25 14:42:25,678 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889313, Speed: 1151.451138 images/s
+2020-03-25 14:42:25,678 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:42:25,678 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:42:30,368 [dl_trainer.py:634] INFO train iter: 2550, num_batches_per_epoch: 25
+2020-03-25 14:42:30,368 [dl_trainer.py:635] INFO Epoch 102, avg train acc: 29.246094, lr: 0.010000, avg loss: 1.807795
+2020-03-25 14:42:33,278 [dl_trainer.py:822] INFO Epoch 102, lr: 0.010000, val loss: 1.788626, val top-1 acc: 30.072146, top-5 acc: 86.895926
+2020-03-25 14:42:41,002 [dl_trainer.py:732] WARNING [102][ 2560/   25][rank:0] loss: 1.831, average forward (0.004336) and backward (0.453510) time: 0.878077, iotime: 0.273535 
+2020-03-25 14:42:47,162 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.895129, Speed: 1143.969250 images/s
+2020-03-25 14:42:47,163 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:42:47,163 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:42:52,689 [dl_trainer.py:634] INFO train iter: 2575, num_batches_per_epoch: 25
+2020-03-25 14:42:52,689 [dl_trainer.py:635] INFO Epoch 103, avg train acc: 29.542969, lr: 0.010000, avg loss: 1.811743
+2020-03-25 14:42:55,914 [dl_trainer.py:822] INFO Epoch 103, lr: 0.010000, val loss: 1.784240, val top-1 acc: 30.229193, top-5 acc: 87.022083
+2020-03-25 14:43:08,947 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.907657, Speed: 1128.179295 images/s
+2020-03-25 14:43:08,947 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:43:08,948 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:43:15,129 [dl_trainer.py:732] WARNING [103][ 2600/   25][rank:0] loss: 1.825, average forward (0.004778) and backward (0.453374) time: 0.829045, iotime: 0.289772 
+2020-03-25 14:43:15,173 [dl_trainer.py:634] INFO train iter: 2600, num_batches_per_epoch: 25
+2020-03-25 14:43:15,173 [dl_trainer.py:635] INFO Epoch 104, avg train acc: 29.375000, lr: 0.010000, avg loss: 1.806818
+2020-03-25 14:43:18,094 [dl_trainer.py:822] INFO Epoch 104, lr: 0.010000, val loss: 1.782312, val top-1 acc: 30.229193, top-5 acc: 87.200853
+2020-03-25 14:43:30,280 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888842, Speed: 1152.060531 images/s
+2020-03-25 14:43:30,281 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:43:30,281 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:43:37,296 [dl_trainer.py:634] INFO train iter: 2625, num_batches_per_epoch: 25
+2020-03-25 14:43:37,296 [dl_trainer.py:635] INFO Epoch 105, avg train acc: 29.722656, lr: 0.010000, avg loss: 1.806282
+2020-03-25 14:43:40,213 [dl_trainer.py:822] INFO Epoch 105, lr: 0.010000, val loss: 1.780829, val top-1 acc: 30.414740, top-5 acc: 87.182119
+2020-03-25 14:43:51,590 [dl_trainer.py:732] WARNING [105][ 2640/   25][rank:0] loss: 1.772, average forward (0.004132) and backward (0.453774) time: 0.865416, iotime: 0.260850 
+2020-03-25 14:43:51,637 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889796, Speed: 1150.825636 images/s
+2020-03-25 14:43:51,637 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:43:51,637 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:43:59,386 [dl_trainer.py:634] INFO train iter: 2650, num_batches_per_epoch: 25
+2020-03-25 14:43:59,386 [dl_trainer.py:635] INFO Epoch 106, avg train acc: 29.843750, lr: 0.010000, avg loss: 1.804940
+2020-03-25 14:44:02,285 [dl_trainer.py:822] INFO Epoch 106, lr: 0.010000, val loss: 1.782607, val top-1 acc: 30.401188, top-5 acc: 87.178333
+2020-03-25 14:44:12,896 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.885758, Speed: 1156.072412 images/s
+2020-03-25 14:44:12,896 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:44:12,896 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:44:21,450 [dl_trainer.py:634] INFO train iter: 2675, num_batches_per_epoch: 25
+2020-03-25 14:44:21,451 [dl_trainer.py:635] INFO Epoch 107, avg train acc: 29.562500, lr: 0.010000, avg loss: 1.814416
+2020-03-25 14:44:24,360 [dl_trainer.py:822] INFO Epoch 107, lr: 0.010000, val loss: 1.778283, val top-1 acc: 30.495057, top-5 acc: 87.260244
+2020-03-25 14:44:28,086 [dl_trainer.py:732] WARNING [107][ 2680/   25][rank:0] loss: 1.801, average forward (0.004127) and backward (0.453781) time: 0.867766, iotime: 0.263768 
+2020-03-25 14:44:34,276 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890783, Speed: 1149.549872 images/s
+2020-03-25 14:44:34,276 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:44:34,276 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:44:43,631 [dl_trainer.py:634] INFO train iter: 2700, num_batches_per_epoch: 25
+2020-03-25 14:44:43,632 [dl_trainer.py:635] INFO Epoch 108, avg train acc: 30.042969, lr: 0.010000, avg loss: 1.797506
+2020-03-25 14:44:46,548 [dl_trainer.py:822] INFO Epoch 108, lr: 0.010000, val loss: 1.776843, val top-1 acc: 30.575375, top-5 acc: 87.305286
+2020-03-25 14:44:55,724 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.893627, Speed: 1145.892580 images/s
+2020-03-25 14:44:55,724 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:44:55,724 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:45:01,936 [dl_trainer.py:732] WARNING [108][ 2720/   25][rank:0] loss: 1.834, average forward (0.004127) and backward (0.453859) time: 0.796800, iotime: 0.265278 
+2020-03-25 14:45:05,833 [dl_trainer.py:634] INFO train iter: 2725, num_batches_per_epoch: 25
+2020-03-25 14:45:05,834 [dl_trainer.py:635] INFO Epoch 109, avg train acc: 29.472656, lr: 0.010000, avg loss: 1.809100
+2020-03-25 14:45:08,744 [dl_trainer.py:822] INFO Epoch 109, lr: 0.010000, val loss: 1.774703, val top-1 acc: 30.709104, top-5 acc: 87.396165
+2020-03-25 14:45:17,136 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892156, Speed: 1147.781196 images/s
+2020-03-25 14:45:17,137 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:45:17,137 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:45:28,047 [dl_trainer.py:634] INFO train iter: 2750, num_batches_per_epoch: 25
+2020-03-25 14:45:28,048 [dl_trainer.py:635] INFO Epoch 110, avg train acc: 29.640625, lr: 0.010000, avg loss: 1.804915
+2020-03-25 14:45:30,968 [dl_trainer.py:822] INFO Epoch 110, lr: 0.010000, val loss: 1.773635, val top-1 acc: 30.869141, top-5 acc: 87.387197
+2020-03-25 14:45:38,543 [dl_trainer.py:732] WARNING [110][ 2760/   25][rank:0] loss: 1.796, average forward (0.004128) and backward (0.454777) time: 0.866649, iotime: 0.261257 
+2020-03-25 14:45:38,604 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.894452, Speed: 1144.835043 images/s
+2020-03-25 14:45:38,605 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:45:38,605 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:45:50,206 [dl_trainer.py:634] INFO train iter: 2775, num_batches_per_epoch: 25
+2020-03-25 14:45:50,206 [dl_trainer.py:635] INFO Epoch 111, avg train acc: 29.457031, lr: 0.010000, avg loss: 1.810081
+2020-03-25 14:45:53,135 [dl_trainer.py:822] INFO Epoch 111, lr: 0.010000, val loss: 1.772419, val top-1 acc: 30.881896, top-5 acc: 87.546436
+2020-03-25 14:46:00,013 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891987, Speed: 1147.999042 images/s
+2020-03-25 14:46:00,013 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:46:00,014 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:46:12,349 [dl_trainer.py:732] WARNING [111][ 2800/   25][rank:0] loss: 1.769, average forward (0.004146) and backward (0.453740) time: 0.796669, iotime: 0.265149 
+2020-03-25 14:46:12,394 [dl_trainer.py:634] INFO train iter: 2800, num_batches_per_epoch: 25
+2020-03-25 14:46:12,394 [dl_trainer.py:635] INFO Epoch 112, avg train acc: 30.054688, lr: 0.010000, avg loss: 1.797456
+2020-03-25 14:46:15,302 [dl_trainer.py:822] INFO Epoch 112, lr: 0.010000, val loss: 1.770616, val top-1 acc: 30.904416, top-5 acc: 87.520129
+2020-03-25 14:46:21,454 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.893321, Speed: 1146.284587 images/s
+2020-03-25 14:46:21,454 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:46:21,455 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:46:34,595 [dl_trainer.py:634] INFO train iter: 2825, num_batches_per_epoch: 25
+2020-03-25 14:46:34,596 [dl_trainer.py:635] INFO Epoch 113, avg train acc: 29.648438, lr: 0.010000, avg loss: 1.793907
+2020-03-25 14:46:37,520 [dl_trainer.py:822] INFO Epoch 113, lr: 0.010000, val loss: 1.768393, val top-1 acc: 30.947266, top-5 acc: 87.650072
+2020-03-25 14:46:42,815 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890008, Speed: 1150.550913 images/s
+2020-03-25 14:46:42,816 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:46:42,816 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:46:49,021 [dl_trainer.py:732] WARNING [113][ 2840/   25][rank:0] loss: 1.830, average forward (0.004145) and backward (0.453544) time: 0.868889, iotime: 0.264570 
+2020-03-25 14:46:56,806 [dl_trainer.py:634] INFO train iter: 2850, num_batches_per_epoch: 25
+2020-03-25 14:46:56,806 [dl_trainer.py:635] INFO Epoch 114, avg train acc: 30.171875, lr: 0.010000, avg loss: 1.799873
+2020-03-25 14:46:59,724 [dl_trainer.py:822] INFO Epoch 114, lr: 0.010000, val loss: 1.767703, val top-1 acc: 30.971381, top-5 acc: 87.647879
+2020-03-25 14:47:04,266 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.893726, Speed: 1145.764981 images/s
+2020-03-25 14:47:04,267 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:47:04,267 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:47:18,973 [dl_trainer.py:634] INFO train iter: 2875, num_batches_per_epoch: 25
+2020-03-25 14:47:18,974 [dl_trainer.py:635] INFO Epoch 115, avg train acc: 29.753906, lr: 0.010000, avg loss: 1.796630
+2020-03-25 14:47:21,886 [dl_trainer.py:822] INFO Epoch 115, lr: 0.010000, val loss: 1.766804, val top-1 acc: 31.259766, top-5 acc: 87.758291
+2020-03-25 14:47:25,599 [dl_trainer.py:732] WARNING [115][ 2880/   25][rank:0] loss: 1.839, average forward (0.004152) and backward (0.453819) time: 0.868658, iotime: 0.264201 
+2020-03-25 14:47:25,651 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890975, Speed: 1149.302322 images/s
+2020-03-25 14:47:25,651 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:47:25,651 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:47:41,078 [dl_trainer.py:634] INFO train iter: 2900, num_batches_per_epoch: 25
+2020-03-25 14:47:41,079 [dl_trainer.py:635] INFO Epoch 116, avg train acc: 29.746094, lr: 0.010000, avg loss: 1.792733
+2020-03-25 14:47:43,994 [dl_trainer.py:822] INFO Epoch 116, lr: 0.010000, val loss: 1.763590, val top-1 acc: 31.207948, top-5 acc: 87.771046
+2020-03-25 14:47:46,993 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889234, Speed: 1151.552966 images/s
+2020-03-25 14:47:46,994 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:47:46,994 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:47:59,326 [dl_trainer.py:732] WARNING [116][ 2920/   25][rank:0] loss: 1.753, average forward (0.004158) and backward (0.453400) time: 0.797792, iotime: 0.266695 
+2020-03-25 14:48:03,201 [dl_trainer.py:634] INFO train iter: 2925, num_batches_per_epoch: 25
+2020-03-25 14:48:03,201 [dl_trainer.py:635] INFO Epoch 117, avg train acc: 30.265625, lr: 0.010000, avg loss: 1.788586
+2020-03-25 14:48:06,129 [dl_trainer.py:822] INFO Epoch 117, lr: 0.010000, val loss: 1.764676, val top-1 acc: 31.099131, top-5 acc: 87.751514
+2020-03-25 14:48:08,368 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890595, Speed: 1149.793758 images/s
+2020-03-25 14:48:08,369 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:48:08,369 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:48:25,437 [dl_trainer.py:634] INFO train iter: 2950, num_batches_per_epoch: 25
+2020-03-25 14:48:25,437 [dl_trainer.py:635] INFO Epoch 118, avg train acc: 29.796875, lr: 0.010000, avg loss: 1.792212
+2020-03-25 14:48:28,354 [dl_trainer.py:822] INFO Epoch 118, lr: 0.010000, val loss: 1.762617, val top-1 acc: 31.219308, top-5 acc: 87.842395
+2020-03-25 14:48:29,823 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.893918, Speed: 1145.518319 images/s
+2020-03-25 14:48:29,824 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:48:29,824 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:48:36,048 [dl_trainer.py:732] WARNING [118][ 2960/   25][rank:0] loss: 1.804, average forward (0.004145) and backward (0.453546) time: 0.869834, iotime: 0.265340 
+2020-03-25 14:48:47,607 [dl_trainer.py:634] INFO train iter: 2975, num_batches_per_epoch: 25
+2020-03-25 14:48:47,608 [dl_trainer.py:635] INFO Epoch 119, avg train acc: 30.089844, lr: 0.010000, avg loss: 1.787524
+2020-03-25 14:48:50,518 [dl_trainer.py:822] INFO Epoch 119, lr: 0.010000, val loss: 1.759274, val top-1 acc: 31.419802, top-5 acc: 87.858936
+2020-03-25 14:48:51,211 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891123, Speed: 1149.111420 images/s
+2020-03-25 14:48:51,212 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:48:51,212 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:49:09,612 [dl_trainer.py:732] WARNING [119][ 3000/   25][rank:0] loss: 1.767, average forward (0.004141) and backward (0.453730) time: 0.795944, iotime: 0.264830 
+2020-03-25 14:49:09,653 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.768365, Speed: 1332.699341 images/s
+2020-03-25 14:49:09,653 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:49:09,653 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:49:09,654 [dl_trainer.py:634] INFO train iter: 3000, num_batches_per_epoch: 25
+2020-03-25 14:49:09,654 [dl_trainer.py:635] INFO Epoch 120, avg train acc: 30.382812, lr: 0.010000, avg loss: 1.788017
+2020-03-25 14:49:12,567 [dl_trainer.py:822] INFO Epoch 120, lr: 0.010000, val loss: 1.760340, val top-1 acc: 31.406250, top-5 acc: 87.832629
+2020-03-25 14:49:31,080 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892748, Speed: 1147.020278 images/s
+2020-03-25 14:49:31,080 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:49:31,081 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:49:31,968 [dl_trainer.py:634] INFO train iter: 3025, num_batches_per_epoch: 25
+2020-03-25 14:49:31,968 [dl_trainer.py:635] INFO Epoch 121, avg train acc: 30.093750, lr: 0.010000, avg loss: 1.787713
+2020-03-25 14:49:34,888 [dl_trainer.py:822] INFO Epoch 121, lr: 0.010000, val loss: 1.757271, val top-1 acc: 31.474609, top-5 acc: 87.875478
+2020-03-25 14:49:46,255 [dl_trainer.py:732] WARNING [121][ 3040/   25][rank:0] loss: 1.775, average forward (0.004285) and backward (0.453809) time: 0.876699, iotime: 0.271966 
+2020-03-25 14:49:52,440 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889935, Speed: 1150.645709 images/s
+2020-03-25 14:49:52,440 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:49:52,441 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:49:54,087 [dl_trainer.py:634] INFO train iter: 3050, num_batches_per_epoch: 25
+2020-03-25 14:49:54,088 [dl_trainer.py:635] INFO Epoch 122, avg train acc: 30.699219, lr: 0.010000, avg loss: 1.786719
+2020-03-25 14:49:57,004 [dl_trainer.py:822] INFO Epoch 122, lr: 0.010000, val loss: 1.755875, val top-1 acc: 31.452089, top-5 acc: 87.882254
+2020-03-25 14:50:13,804 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890115, Speed: 1150.413685 images/s
+2020-03-25 14:50:13,804 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:50:13,804 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:50:16,217 [dl_trainer.py:634] INFO train iter: 3075, num_batches_per_epoch: 25
+2020-03-25 14:50:16,218 [dl_trainer.py:635] INFO Epoch 123, avg train acc: 30.902344, lr: 0.001000, avg loss: 1.782726
+2020-03-25 14:50:19,138 [dl_trainer.py:822] INFO Epoch 123, lr: 0.001000, val loss: 1.756020, val top-1 acc: 31.354432, top-5 acc: 87.908562
+2020-03-25 14:50:22,865 [dl_trainer.py:732] WARNING [123][ 3080/   25][rank:0] loss: 1.772, average forward (0.004158) and backward (0.453559) time: 0.872058, iotime: 0.267637 
+2020-03-25 14:50:35,203 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.891578, Speed: 1148.525195 images/s
+2020-03-25 14:50:35,204 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:50:35,204 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:50:38,390 [dl_trainer.py:634] INFO train iter: 3100, num_batches_per_epoch: 25
+2020-03-25 14:50:38,391 [dl_trainer.py:635] INFO Epoch 124, avg train acc: 30.464844, lr: 0.001000, avg loss: 1.781585
+2020-03-25 14:50:41,312 [dl_trainer.py:822] INFO Epoch 124, lr: 0.001000, val loss: 1.755913, val top-1 acc: 31.494141, top-5 acc: 87.921317
+2020-03-25 14:50:56,485 [dl_trainer.py:732] WARNING [124][ 3120/   25][rank:0] loss: 1.814, average forward (0.004151) and backward (0.453439) time: 0.796949, iotime: 0.265641 
+2020-03-25 14:50:56,537 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888852, Speed: 1152.048338 images/s
+2020-03-25 14:50:56,537 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:50:56,537 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:51:00,508 [dl_trainer.py:634] INFO train iter: 3125, num_batches_per_epoch: 25
+2020-03-25 14:51:00,509 [dl_trainer.py:635] INFO Epoch 125, avg train acc: 30.878906, lr: 0.001000, avg loss: 1.780863
+2020-03-25 14:51:03,552 [dl_trainer.py:822] INFO Epoch 125, lr: 0.001000, val loss: 1.755234, val top-1 acc: 31.360411, top-5 acc: 87.989676
+2020-03-25 14:51:18,220 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.903431, Speed: 1133.457127 images/s
+2020-03-25 14:51:18,220 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:51:18,220 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:51:22,937 [dl_trainer.py:634] INFO train iter: 3150, num_batches_per_epoch: 25
+2020-03-25 14:51:22,938 [dl_trainer.py:635] INFO Epoch 126, avg train acc: 29.734375, lr: 0.001000, avg loss: 1.792188
+2020-03-25 14:51:25,856 [dl_trainer.py:822] INFO Epoch 126, lr: 0.001000, val loss: 1.755470, val top-1 acc: 31.361209, top-5 acc: 87.963369
+2020-03-25 14:51:33,412 [dl_trainer.py:732] WARNING [126][ 3160/   25][rank:0] loss: 1.754, average forward (0.004272) and backward (0.453449) time: 0.881331, iotime: 0.273776 
+2020-03-25 14:51:39,575 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889755, Speed: 1150.878406 images/s
+2020-03-25 14:51:39,575 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:51:39,576 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:51:45,042 [dl_trainer.py:634] INFO train iter: 3175, num_batches_per_epoch: 25
+2020-03-25 14:51:45,043 [dl_trainer.py:635] INFO Epoch 127, avg train acc: 30.492188, lr: 0.001000, avg loss: 1.785118
+2020-03-25 14:51:47,967 [dl_trainer.py:822] INFO Epoch 127, lr: 0.001000, val loss: 1.755804, val top-1 acc: 31.494141, top-5 acc: 87.865713
+2020-03-25 14:52:00,913 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889026, Speed: 1151.822735 images/s
+2020-03-25 14:52:00,913 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:52:00,913 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:52:07,111 [dl_trainer.py:732] WARNING [127][ 3200/   25][rank:0] loss: 1.759, average forward (0.004156) and backward (0.453514) time: 0.796802, iotime: 0.265516 
+2020-03-25 14:52:07,155 [dl_trainer.py:634] INFO train iter: 3200, num_batches_per_epoch: 25
+2020-03-25 14:52:07,155 [dl_trainer.py:635] INFO Epoch 128, avg train acc: 31.117188, lr: 0.001000, avg loss: 1.781053
+2020-03-25 14:52:10,083 [dl_trainer.py:822] INFO Epoch 128, lr: 0.001000, val loss: 1.754754, val top-1 acc: 31.392698, top-5 acc: 87.963369
+2020-03-25 14:52:22,276 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890096, Speed: 1150.437579 images/s
+2020-03-25 14:52:22,277 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:52:22,278 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:52:29,279 [dl_trainer.py:634] INFO train iter: 3225, num_batches_per_epoch: 25
+2020-03-25 14:52:29,279 [dl_trainer.py:635] INFO Epoch 129, avg train acc: 30.554688, lr: 0.001000, avg loss: 1.782729
+2020-03-25 14:52:32,199 [dl_trainer.py:822] INFO Epoch 129, lr: 0.001000, val loss: 1.755810, val top-1 acc: 31.399474, top-5 acc: 87.927296
+2020-03-25 14:52:43,625 [dl_trainer.py:732] WARNING [129][ 3240/   25][rank:0] loss: 1.779, average forward (0.004256) and backward (0.453755) time: 0.873990, iotime: 0.268978 
+2020-03-25 14:52:43,643 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.890210, Speed: 1150.290827 images/s
+2020-03-25 14:52:43,643 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:52:43,643 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:52:51,442 [dl_trainer.py:634] INFO train iter: 3250, num_batches_per_epoch: 25
+2020-03-25 14:52:51,442 [dl_trainer.py:635] INFO Epoch 130, avg train acc: 30.316406, lr: 0.001000, avg loss: 1.787639
+2020-03-25 14:52:54,380 [dl_trainer.py:822] INFO Epoch 130, lr: 0.001000, val loss: 1.755288, val top-1 acc: 31.399474, top-5 acc: 88.002431
+2020-03-25 14:53:05,054 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.892099, Speed: 1147.854611 images/s
+2020-03-25 14:53:05,055 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:53:05,055 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:53:13,586 [dl_trainer.py:634] INFO train iter: 3275, num_batches_per_epoch: 25
+2020-03-25 14:53:13,587 [dl_trainer.py:635] INFO Epoch 131, avg train acc: 30.628906, lr: 0.001000, avg loss: 1.783401
+2020-03-25 14:53:16,506 [dl_trainer.py:822] INFO Epoch 131, lr: 0.001000, val loss: 1.755171, val top-1 acc: 31.425781, top-5 acc: 87.901785
+2020-03-25 14:53:20,210 [dl_trainer.py:732] WARNING [131][ 3280/   25][rank:0] loss: 1.792, average forward (0.004346) and backward (0.454057) time: 0.876919, iotime: 0.271279 
+2020-03-25 14:53:26,367 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.887976, Speed: 1153.184810 images/s
+2020-03-25 14:53:26,367 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:53:26,367 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:53:35,653 [dl_trainer.py:634] INFO train iter: 3300, num_batches_per_epoch: 25
+2020-03-25 14:53:35,654 [dl_trainer.py:635] INFO Epoch 132, avg train acc: 30.394531, lr: 0.001000, avg loss: 1.785830
+2020-03-25 14:53:38,573 [dl_trainer.py:822] INFO Epoch 132, lr: 0.001000, val loss: 1.754860, val top-1 acc: 31.478396, top-5 acc: 87.885244
+2020-03-25 14:53:47,689 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888372, Speed: 1152.669834 images/s
+2020-03-25 14:53:47,689 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:53:47,689 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:53:53,897 [dl_trainer.py:732] WARNING [132][ 3320/   25][rank:0] loss: 1.828, average forward (0.004159) and backward (0.453866) time: 0.799803, iotime: 0.268110 
+2020-03-25 14:53:57,761 [dl_trainer.py:634] INFO train iter: 3325, num_batches_per_epoch: 25
+2020-03-25 14:53:57,762 [dl_trainer.py:635] INFO Epoch 133, avg train acc: 30.402344, lr: 0.001000, avg loss: 1.786545
+2020-03-25 14:54:00,684 [dl_trainer.py:822] INFO Epoch 133, lr: 0.001000, val loss: 1.755143, val top-1 acc: 31.465641, top-5 acc: 87.956593
+2020-03-25 14:54:09,032 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889243, Speed: 1151.541207 images/s
+2020-03-25 14:54:09,032 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:54:09,033 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:54:19,839 [dl_trainer.py:634] INFO train iter: 3350, num_batches_per_epoch: 25
+2020-03-25 14:54:19,839 [dl_trainer.py:635] INFO Epoch 134, avg train acc: 29.960938, lr: 0.001000, avg loss: 1.784616
+2020-03-25 14:54:22,768 [dl_trainer.py:822] INFO Epoch 134, lr: 0.001000, val loss: 1.755477, val top-1 acc: 31.480588, top-5 acc: 87.888233
+2020-03-25 14:54:30,312 [dl_trainer.py:732] WARNING [134][ 3360/   25][rank:0] loss: 1.753, average forward (0.004137) and backward (0.453797) time: 0.868514, iotime: 0.263552 
+2020-03-25 14:54:30,355 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.888403, Speed: 1152.629504 images/s
+2020-03-25 14:54:30,355 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:54:30,355 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]
+2020-03-25 14:54:41,942 [dl_trainer.py:634] INFO train iter: 3375, num_batches_per_epoch: 25
+2020-03-25 14:54:41,943 [dl_trainer.py:635] INFO Epoch 135, avg train acc: 30.273438, lr: 0.001000, avg loss: 1.787529
+2020-03-25 14:54:44,868 [dl_trainer.py:822] INFO Epoch 135, lr: 0.001000, val loss: 1.754036, val top-1 acc: 31.386719, top-5 acc: 87.931082
+2020-03-25 14:54:51,703 [dist_trainer.py:90] WARNING Time per iteration including communication: 0.889479, Speed: 1151.235439 images/s
+2020-03-25 14:54:51,704 [distributed_optimizer.py:142] INFO Average number of selected gradients: 269.000000, exact k: 269
+2020-03-25 14:54:51,704 [distributed_optimizer.py:143] INFO The number of selected gradients: [269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269, 269]

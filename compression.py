@@ -42,6 +42,141 @@ class TopKCompressor():
         TopKCompressor.indexes = {} 
 
     @staticmethod
+    def topk(tensor, k):
+        #selected_values, selected_indexes =  torch.topk(torch.abs(tensor), k=k, largest = True)i
+        selected_indexes = torch.abs(tensor).argsort()[-k:]
+        selected_values = tensor[selected_indexes]
+        return selected_values, selected_indexes
+
+    @staticmethod
+    def mink(tensor, k):
+        #selected_values, selected_indexes =  torch.topk(torch.abs(tensor), k=k, largest = False)
+        selected_indexes = torch.abs(tensor).argsort()[:k]
+        selected_values = tensor[selected_indexes]
+        return selected_values, selected_indexes
+    
+
+    @staticmethod
+    def bucketized_topk(tensor, k):
+        sorted_index = torch.abs(tensor).argsort(descending=True)
+        sorted_tensor = tensor[sorted_index]
+        sorted_int_tensor = (sorted_tensor * 100).int()
+        tensor_size = tensor.size(0)
+        indexes =  torch.tensor([], dtype=torch.int64, device=tensor.device)
+        residual_indexes = torch.tensor([], dtype=torch.int64, device=tensor.device)
+        #Bucketization using pytorch
+        bins, bin_index, bin_count = torch.unique(sorted_int_tensor, return_inverse=True, return_counts=True)
+        #print("Original max: %s min: %s" %(torch.max(tensor), torch.min(tensor)))
+
+        #print(bins, bin_count)
+        #Selecting special element from bucket
+        start_index = 0
+        for b in range(len(bins)):
+            count = bin_count[b].item()
+            if count == 1:
+                end_index = count
+            else:
+                end_index = round((count*k)/tensor_size)
+            indexes = torch.cat([indexes, sorted_index[start_index:start_index + end_index]], dim=0)
+            residual_indexes = torch.cat([residual_indexes, sorted_index[start_index + end_index: start_index + count]], dim=0)
+            start_index += bin_count[b].item()
+
+        #print("1st Modified max: %s min: %s" %(torch.max(tensor[indexes]), torch.min(tensor[indexes])))
+        #print("Residual max: %s min: %s" %(torch.max(tensor[residual_indexes]), torch.min(tensor[residual_indexes])))
+        #Picking top indexes from residuals if index size is less than k
+        if k > indexes.size(0):
+            diff = k - indexes.size(0)
+            indexes = torch.cat([indexes, residual_indexes[:diff]], dim=0)
+        #print("Modified max: %s min: %s" %(torch.max(tensor[indexes]), torch.min(tensor[indexes])))
+        #Readjusting indexes size with K in case of index size greater than k
+        indexes=indexes[:k]
+        return tensor[indexes], indexes
+    
+    @staticmethod
+    def uniform_topk(tensor, k):
+        sorted_index = tensor.argsort()
+        interval = 101#torch.tensor(int(tensor.size(0)/k), dtype = torch.int, device = sorted_index.device)
+        selected_index = sorted_index[::interval][-k:]
+        return tensor[selected_index], selected_index
+
+    @staticmethod
+    def uniform_abs_topk(tensor, k):
+        return TopKCompressor.uniform_topk(torch.abs(tensor), k)
+
+    @staticmethod
+    def bellk(tensor, k):
+        #tensor and k both should be either or or even
+        '''
+        flag = False
+        if not (tensor.size(0) % 2):
+            if (k %2):
+                k += 1
+                flag = True
+        else:
+            if not (k %2):
+                k += 1
+                flag = True
+        '''
+        sorted_index = tensor.argsort()
+        tensor_size = sorted_index.size(0)
+        if not (tensor_size % 2):
+            mid_index_1 = torch.tensor([(tensor_size - 2)/2], dtype=sorted_index.dtype, device = sorted_index.device)
+            mid_index_2 = torch.tensor([(tensor_size)/2], dtype=sorted_index.dtype, device = sorted_index.device)
+            k -= 2
+
+            pos_window = sorted_index[: mid_index_1+1]
+            pos_window_values = tensor[pos_window]
+            neg_window = sorted_index[mid_index_2 :]
+            neg_window_values = tensor[neg_window]
+            mid_value_1 = tensor[mid_index_1]
+            mid_value_2 = tensor[mid_index_2]
+            neg_values, neg_indexes = TopKCompressor.uniform_topk(neg_window_values, ((k-1)/2)+1)
+            pos_values, pos_indexes = TopKCompressor.uniform_topk(pos_window_values, ((k-1)/2)+1)
+
+            pos_values, pos_indexes, neg_values, neg_indexes = pos_values[1:], pos_indexes[1:], neg_values[1:], neg_indexes[1:]
+            #print(tensor[neg_window[neg_indexes]], tensor[mid_index_1],tensor[mid_index_2], tensor[pos_window[pos_indexes]])
+            selected_indexes = torch.cat((neg_window[neg_indexes], mid_index_1, mid_index_2, pos_window[pos_indexes]))
+        else:
+            mid_index = torch.tensor([(tensor_size - 1)/2], dtype=sorted_index.dtype, device = sorted_index.device)
+            k -= 1
+
+            pos_window = sorted_index[:mid_index+1]
+            pos_window_values = tensor[pos_window]
+            neg_window = sorted_index[mid_index:]
+            neg_window_values = tensor[neg_window]
+            mid_value = tensor[mid_index]
+            neg_values, neg_indexes = TopKCompressor.uniform_topk(neg_window_values, ((k)/2)+1)
+            pos_values, pos_indexes = TopKCompressor.uniform_topk(pos_window_values, ((k)/2)+1)
+
+            pos_values, pos_indexes, neg_values, neg_indexes = pos_values[1:], pos_indexes[1:], neg_values[1:], neg_indexes[1:]
+            selected_indexes = torch.cat((neg_window[neg_indexes], mid_index, pos_window[pos_indexes]))
+        return tensor[selected_indexes], selected_indexes
+
+    @staticmethod
+    def median_topk(tensor, k):
+        print(tensor.size(), k)
+        sorted_index = tensor.argsort()
+        interval = int((tensor.size(0)+k)/k)
+        start_index = torch.tensor(0, dtype = torch.int, device = sorted_index.device)
+        end_index = torch.tensor(0, dtype = torch.int, device = sorted_index.device)
+        selected_index = torch.zeros(k, dtype = sorted_index.dtype, device = sorted_index.device)
+        selected_index[0] = sorted_index[0]
+        selected_index[-1] = sorted_index[-1]
+
+        print(interval, k*interval, k)
+        i = 0
+        while end_index+interval+1 <= tensor.size(0):
+            end_index = start_index+interval+1
+            median_value = torch.median(tensor[sorted_index[start_index:end_index]])
+            selected_index[i+1] = (tensor == median_value.item()).nonzero()[0][0]
+            start_index += interval+1
+        else:
+           median_value = torch.median(tensor[sorted_index[start_index:]])
+           selected_index[i+1] = (tensor == median_value.item()).nonzero()[0][0]
+           start_index += interval+1
+        return tensor[selected_index], selected_index
+
+    @staticmethod
     def compress(tensor, name=None, sigma_scale=2.5, ratio=0.05):
         start = time.time()
         with torch.no_grad():
@@ -53,7 +188,7 @@ class TopKCompressor():
 
             tensor.data.add_(TopKCompressor.residuals[name].data)
 
-            values, indexes = torch.topk(torch.abs(tensor.data), k=k)
+            values, indexes = TopKCompressor.uniform_abs_topk(tensor.data, k)
             values = tensor.data[indexes]
             TopKCompressor.residuals[name].data = tensor.data + 0.0
             TopKCompressor.residuals[name].data[indexes] = 0. 
