@@ -402,12 +402,16 @@ class _DistributedOptimizer(torch.optim.Optimizer):
 
     def _allreduce_grad_async(self, p, name):
         tensor = p.data.view(-1)
-        tensor_compressed, ctx = tensor, None #self._compression.compress(tensor, name)
+        stime = time.time()
+        #print("Rank: %s Original Values: %s" %(rank(), tensor))
+        tensor, ctx, selected_tensors = self._compression.compress(tensor, name) #tensor, None
+        #logger.info("Compression Time: %s" %(time.time()-stime))
         if settings.LOGGING_GRADIENTS and rank() == 0:
             grads = tensor.cpu().numpy()
             np.save('%s/r%d_gradients_iter_%d' % (self._gradient_path, rank(), self.train_iter), grads)
-        handle = allreduce_async_(tensor_compressed, average=True, name=name)
-        return handle, ctx
+        #print("Rank: %s Selected Values: %s" %(rank(), selected_tensors))
+        handle = allreduce_async_(selected_tensors, average=True, name=name) #(tensor_compressed, average=True, name=name) 
+        return handle, None
 
     def _sparse_allreduce_async(self, p, name, density):
         stime = time.time()
@@ -482,6 +486,11 @@ class _DistributedOptimizer(torch.optim.Optimizer):
             else:
                 stime = time.time()
                 output = synchronize(handle)
+                print("Rank: %s Mean after allreduce: %s" %(rank(),output))
+                stime = time.time()
+                output = self._compression.decompress(output)
+                #logger.info("Decompression Time : %s" %(time.time()-stime))
+                #print("Rank: %s Tensor Decompressed: %s" %(rank(),output))
                 if self._profiling:
                     utils.force_insert_item(self._allreduce_timers, name, time.time()-stime)
                 stime = time.time()
@@ -573,7 +582,6 @@ def DistributedOptimizer(optimizer, named_parameters=None, compression=None, is_
     # The goal is to override the `step()` method with an allreduce implementation.
     cls = type(optimizer.__class__.__name__, (optimizer.__class__,),
                dict(_DistributedOptimizer.__dict__))
-
     return cls(optimizer.param_groups, named_parameters, compression, is_sparse, density, seq_layernames=seq_layernames, layerwise_times=layerwise_times, norm_clip=None, threshold=threshold, writer=writer, gradient_path=gradient_path)
 
 

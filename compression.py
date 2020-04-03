@@ -223,6 +223,95 @@ class TopKCompressor():
         z = tensor 
         return z 
 
+
+class BucketCompressor():
+    """
+    Bucket compressor by Subhadeep
+    """
+    buckets = []
+    means = []
+    residuals = []
+    name = 'bucket'                                         #Name of compressor
+
+    @staticmethod
+    def clear():
+        BucketCompressor.buckets = []
+        BucketCompressor.means = []
+        BucketCompressor.residuals = []
+
+    @staticmethod
+    def bucket_mean_2(tensor, l=1):
+        BucketCompressor.buckets = []
+        BucketCompressor.means = torch.zeros(2, dtype=tensor.dtype, device=tensor.device)
+        BucketCompressor.residuals = torch.zeros_like(tensor)
+        
+        
+        positive_indexes = torch.arange(tensor.size(0), dtype = torch.long, device = tensor.device)
+        negative_indexes = torch.arange(tensor.size(0), dtype = torch.long, device = tensor.device)
+
+        BucketCompressor.buckets.append(positive_indexes[tensor >= 0])
+        BucketCompressor.buckets.append(negative_indexes[tensor < 0])
+
+        for i in range(2):
+            if len(BucketCompressor.buckets[i]) > 0:
+                BucketCompressor.means[i] = torch.mean(tensor[BucketCompressor.buckets[i]], dim=-1)
+
+
+        tensor[BucketCompressor.buckets[0]] = tensor[BucketCompressor.buckets[0]].add_(-BucketCompressor.means[0])
+        tensor[BucketCompressor.buckets[1]] = tensor[BucketCompressor.buckets[1]].add_(-BucketCompressor.means[1])
+
+        BucketCompressor.residuals = tensor
+
+        return BucketCompressor.means
+
+    @staticmethod
+    def bucket_mean(tensor, l=1):
+        sorted_index = tensor.argsort()                         #Indexes of sorted tensor data in ascending order
+        sorted_tensor = tensor[sorted_index]                    #Sorted tensor data
+        sorted_int_tensor = torch.mul(sorted_tensor, l).int()   #multiply l with sorted tensor data and cast it to int
+        
+        bins, bin_index, bin_count = torch.unique(sorted_int_tensor, return_inverse=True, return_counts=True) #Find buckets
+        
+        ##Torch initialization of buckets, means and residuals
+        BucketCompressor.buckets = []
+        BucketCompressor.means = torch.zeros(len(bins), dtype=tensor.dtype, device=tensor.device)
+        BucketCompressor.residuals = torch.zeros_like(tensor)
+
+        start_index = 0                                         #Track the start index of bin 
+        for b in range(len(bins)):
+            count = bin_count[b].item()                         #Fetch the num. of elements in each bin
+            end_index = count                                   #Set last index of bin
+
+            bucket_indexes = sorted_index[start_index:start_index + end_index]  #Bucketized the index
+            bucket_tensors = tensor[bucket_indexes]                                     #Bucketized the values
+            bucket_mean = torch.mean(bucket_tensors, dim=-1)                     #Calculate mean for the bucket
+            BucketCompressor.buckets.append(bucket_indexes)                      #Storing tensor indexes as buckets     
+            BucketCompressor.means[b] = bucket_mean
+            tensor[bucket_indexes] = tensor[bucket_indexes].add_(-bucket_mean)    #Subtract the bucket min from bucket values                              
+            start_index += count                                #Update start index for next bin
+        
+        BucketCompressor.residuals = tensor
+
+        return BucketCompressor.means
+
+    @staticmethod
+    def compress(tensor, name=None):
+        with torch.no_grad():
+            # Bucket implementation
+            updated_tensor = BucketCompressor.bucket_mean_2(tensor.data) #Set all bucket related information
+            return tensor, None, updated_tensor            # Original gradients, None, mean values
+
+    @staticmethod
+    def decompress(tensor, name=None):
+        for i in range(len(BucketCompressor.means)):                                             #Iterate through each allreduced mean values
+            BucketCompressor.residuals[BucketCompressor.buckets[i]] = BucketCompressor.residuals[BucketCompressor.buckets[i]].add_(BucketCompressor.means[i]) #Add mean values with each element in a bucket
+        
+        tensor = BucketCompressor.residuals
+        BucketCompressor.clear()
+
+        return tensor
+
+
 class TopKCompressor2(TopKCompressor):
     name = 'topk2' # without residuals
 
@@ -652,6 +741,7 @@ class RedSyncTrimCompressor(RedSyncCompressor):
 compressors = {
         'topk': TopKCompressor,
         'topk2': TopKCompressor2,
+        'bucket': BucketCompressor,
         'gaussian': GaussianCompressor,
         'gaussian2': GaussianCompressor2,
         'randomk': RandomKCompressor,

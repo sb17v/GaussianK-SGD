@@ -32,8 +32,8 @@ def ssgd(dnn, dataset, data_dir, nworkers, lr, batch_size, nsteps_update, max_ep
     trainer.set_train_epoch(int(hvd.broadcast(init_epoch, root_rank=0)[0]))
     trainer.set_train_iter(int(hvd.broadcast(init_iter, root_rank=0)[0]))
     is_sparse = density < 1
-    if not is_sparse:
-        compressor = None
+    #if not is_sparse:
+    #    compressor = None
 
     if settings.ADAPTIVE_MERGE or settings.ADAPTIVE_SPARSE:
         seq_layernames, layerwise_times, layerwise_sizes = benchmark(trainer)

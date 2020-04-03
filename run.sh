@@ -2,8 +2,8 @@
 dnn="${dnn:-resnet20}"
 source exp_configs/$dnn.conf
 nworkers="${nworkers:-2}"
-density="${density:-0.001}"
-compressor="${compressor:-topk}"
+density="${density:-1}"
+compressor="${compressor:-bucket}"
 nwpernode=1
 nstepsupdate=1
 MPIPATH=/usr/local/openmpi/openmpi-4.0.1
